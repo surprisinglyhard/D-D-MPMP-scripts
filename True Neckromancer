@@ -1,0 +1,366 @@
+/*	-INFORMATION-
+	Subject:	New Class
+	Effect:		This script adds a new class to the sheet
+				
+	Sheet:		v12.999 [v12.999 uses 'borrow' for the burrow speed]
+*/
+
+var iFileName = "True Necromancer Class.js";
+
+RequiredSheetVersion(12.999);
+
+ClassList["true necromancer"] = {
+
+	regExpSearch : /^(?=.*true)(?=.*necromancer).*$/i,
+
+	name : "True Necromancer",
+
+	source : ["HB", 0],
+
+	primaryAbility : "\n \u2022 True Necromancer: Intelligence;",
+
+	prereqs : "\n \u2022 True Necromancer: Intelligence 13;",
+
+	die : 6,
+
+	improvements : [0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5],
+
+	saves : ["Int", "Con"],
+
+	skills : ["\n\n" + toUni("True Necromancer") + ": Choose two from Arcana, History, Deception, Intimidation, Perception, Religion, and Stealth.", "\n\n" + toUni("True Necromancer") + ": Choose one from Arcana, History, Deception, Intimidation."],
+
+	armor : [
+
+		[false, false, false, false],
+
+		[false, false, false, false],
+
+
+	],
+
+	weapons : [
+
+		[true, false, ["Scythe"]],
+
+		[true, false, ["Scythe"]]
+
+	],
+
+	equipment : "True Necromancer starting equipment:\n \u2022 No armor, a dagger -or- quarter staff , and a Component pouch -or- an arcane focus;\n \u2022 A scholar's pack -or- an explorer's pack.\n\nAlternatively, choose 5d4 \xD7 10 gp worth of starting equipment instead of both the class' and the background's starting equipment.",
+
+	subclasses : ["Calling", ["Calling of the pale master"]],
+
+	attacks : [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+
+	abilitySave : 4,
+
+	spellcastingFactor : 1,
+
+	spellcastingKnown : {
+
+			cantrips : [3, 3, 3, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+
+			spells : "book",
+
+			prepared : true
+
+		},
+
+	spellcastingList : {
+
+		class : "any",
+
+		school : ["Necro"],
+
+	},
+
+	speed : {
+
+		walk : { spd : 30, enc : 20 }
+
+	},
+
+	features : {
+
+		"spellcasting" : {
+
+			name : "Spellcasting",
+
+			source : ["P", 114],
+
+			minlevel : 1,
+
+			description : "\n   " + "I can cast prepared necromancer cantrips/spells, using Intelligence as my spellcasting ability" + "\n   " + "I can use an arcane focus as a spellcasting focus" + "\n   " + "I can cast all necromancer spells in my spellbook as rituals if they have the ritual tag",
+	
+		},
+
+		"arcane recovery" : {
+
+			name : "Arcane Recovery",
+
+			source : [["SRD", 53], ["P", 115]],
+
+			minlevel : 1,
+
+			description : desc([
+
+				"Once per day after a short rest, I can recover a number of 5th-level or lower spell slots"
+
+			]),
+
+			additional : ["1 level of spell slots", "1 level of spell slots", "2 levels of spell slots", "2 levels of spell slots", "3 levels of spell slots", "3 levels of spell slots", "4 levels of spell slots", "4 levels of spell slots", "5 levels of spell slots", "5 levels of spell slots", "6 levels of spell slots", "6 levels of spell slots", "7 levels of spell slots", "7 levels of spell slots", "8 levels of spell slots", "8 levels of spell slots", "9 levels of spell slots", "9 levels of spell slots", "10 levels of spell slots", "10 levels of spell slots"],
+
+			usages : 2,
+
+			recovery : "long rest"
+
+		},
+
+		"the dead see dead" : {
+
+			name : "The Dead See Dead",
+
+			source : ["HB", 0],
+
+			minlevel : 2,
+
+			description : desc([
+
+				"I gain a adv. to save vs. Fear caused by undead",
+
+				"if an undead, targets me directly with an attack or a harmful spell, that creature must make a Wisdom saving throw against my spell save DC",
+
+				"On a failed save, the creature must choose a new target or forfeit targeting me potentially wasting the attack or spell",
+
+				"The undead becomes immune to this effect for 24 hours it succeeds the saving throw or I target it with an harmful attack or spell"
+
+			]),
+
+			savetxt : {
+
+				text : ["adv. vs. Fear from undead"]
+
+			}
+
+		},
+
+		subclassfeature3 : {
+
+			name : "Calling",
+
+			source : ["HB", 0],
+
+			minlevel : 3,
+
+			description : "\n   " + "Choose the Calling you followed and put it in the \"Class\" field" + "\n   " + "Choose Calling of the pale master"
+
+		},
+
+		"thralls" : {
+
+			name : "Thralls",
+
+			source : ["HB", 0],
+
+			minlevel : 6,
+
+			description : desc([
+
+				"I add Animate Dead to my spellbook and can have an additional target when casting it",
+
+				"Undead created by my necromancy spells add my necromancer level to their HP maximums and my proficiency bonus to their to-hit and weapon damage rolls."
+
+			])
+
+		},
+
+		"one with death" : {
+
+			name : "One With Death",
+
+			source : ["HB",0],
+
+			minlevel : 10,
+
+			description : desc([
+
+				"I gain Resistance to non-magical slashing, peircing, poison and bludgening damage",
+
+				"If damage reduces me to 0 hit points, I can make a Constitution saving throw with a DC of 5+ half the damage taken (rounded up)",
+
+				"On a success, I drop to 1 Hit Point instead, Raidiant and Critical hit damage ignore this ability"
+
+			]),
+
+			dmgres : ["Poison","Slashing","Peircing","Bludgening"]
+
+		},
+
+		"unholy constitution" : {
+
+			name : "Unholy Constitutiom",
+
+			source : ["P", 119],
+
+			minlevel : 14,
+
+			description : desc([
+
+				"I have resistance to necrotic damage and my hit point maximum can't be reduced"
+
+			]),
+
+			dmgres : ["Necrotic"]
+
+		},
+
+		"profaned ground" : {
+
+			name : "Profaned Ground",
+
+			source : ["HB",0],
+
+			minlevel : 18,
+
+			description : desc([
+
+				"I can create a 80-foot radius area of effect centered on me corpses in the area of effect rise into Skeletons or Zombies immediately",
+
+				"Anyone who dies in the area within the next 12 hours also becomes one of the undead"
+
+			]),
+
+			usages : 1,
+
+			recovery : "long rest"
+
+		}
+
+		
+
+
+	}
+
+	
+
+};
+
+ClassSubList["Calling of the pale master"] = {
+
+	regExpSearch : /^(?=.*calling)(?=.*of)(?=.*the)(?=.*pale)(?=.*master).*$/i,
+
+	subname : "Calling of the pale master",
+
+	source : ["HB",0],
+
+	features : {
+
+		"subclassfeature3" : {
+
+			name : "Master of Puppets",
+
+			source : ["HB",0],
+
+			minlevel : 3,
+
+			description : desc([
+
+				"Undead creatures I raise stay under my control permanently"
+
+			])
+		
+		},
+
+		"subclassfeature7" : {
+
+			name : "Witching Hour",
+
+			source : ["HB",0],
+
+			minlevel : 7,
+
+			description : desc([
+
+				"I can cast Animate Dead at its base level with a casting time of 1 action, for a number of times a day equal to my Intelligence modifier (minimum of 1)"
+
+			]),
+
+			usages : "Intelligence modifier per ",
+
+			usagescalc : "event.value = Math.max(1, What('Int Mod'));",
+
+			recovery : "long rest"
+
+		},
+
+		"subclassfeature11" : {
+
+			name : "Children of The Grave",
+
+			source : ["HB",0],
+
+			minlevel : 11,
+
+			description : desc([
+
+				"As an action, each undead within 60 ft that I can see must make a Wisdom saving throw",
+
+				"Undead that fail come under my control for 24 hours, Undead that succeed are immune to the effects for 24 hours"
+
+			]),
+
+			action : ["action", ""]
+
+		},
+
+		"subclassfeature15" : {
+
+			name : "Seek and Destroy",
+
+			source : ["HB",0],
+
+			minlevel : 15,
+
+			description : desc([
+
+				"I can preform a ritual permanently loosing 1 point of Constitution and replacing my arm with an undead prosthetic, which may be in skeletal form or preserved flesh stiched into place like that of a Flesh Golem",
+
+				"The graft grants advantage on any Strength d20 rolls and adds +2 to my base armor class",
+
+				"I can make an attack with the Undead Graft, if the attack hits, the target makes a Constitution saving throw or dies and then reanimates one round later as a zombie or skeleton, under my control",
+
+				"I can use this feature a number of times per day equal to my Constitution modfier (minimum 1) per long rest"
+
+			]),
+
+			usages : "Constitution modifier per ",
+
+			usagescalc : "event.value = Math.max(1, What('Con Mod'));",
+
+			recovery : "long rest"
+
+		},
+
+		"subclassfeature19" : {
+
+			name : "Keeper of the Seven Keys",
+
+			source : ["HB",0],
+
+			minlevel : 19,
+
+			description : desc([
+
+				"I can preform a ritual to use my witching hour feature on a creatue huge or smaller"
+
+			]),
+
+			usages : 1,
+
+			recovery : "long rest"
+
+		}
+
+	}
+
+};
