@@ -205,7 +205,7 @@ ClassList["true necromancer"] = {
 
 			name : "Unholy Constitutiom",
 
-			source : ["P", 119],
+			source : ["HB", 0],
 
 			minlevel : 14,
 
@@ -270,7 +270,7 @@ ClassSubList["Calling of the pale master"] = {
 
 			description : desc([
 
-				"Undead creatures I raise stay under my control permanently"
+				"Undead creatures I raise stay under my control until destroyed"
 
 			])
 		
