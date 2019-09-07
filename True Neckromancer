@@ -128,11 +128,11 @@ ClassList["true necromancer"] = {
 
 				"I gain a adv. to save vs. Fear caused by undead",
 
-				"if an undead, targets me directly with an attack or a harmful spell, that creature must make a Wisdom saving throw against my spell save DC",
+				"if an undead, targets me directly with an attack or a harmful spell, that creature must make a", "Wisdom saving throw against my spell save DC",
 
-				"On a failed save, the creature must choose a new target or forfeit targeting me potentially wasting the attack or spell",
+				"On a failed save, the creature must choose a new target or forfeit targeting me potentially", "wasting the attack or spell",
 
-				"The undead becomes immune to this effect for 24 hours it succeeds the saving throw or I target it with an harmful attack or spell"
+				"The undead becomes immune to this effect for 24 hours it succeeds the saving throw or I", "target it with an harmful attack or spell"
 
 			]),
 
@@ -168,9 +168,14 @@ ClassList["true necromancer"] = {
 
 				"I add Animate Dead to my spellbook and can have an additional target when casting it",
 
-				"Undead created by my necromancy spells add my necromancer level to their HP maximums and my proficiency bonus to their to-hit and weapon damage rolls."
+				"Undead created by my necromancy spells add my necromancer level to their HP maximums", "and my proficiency bonus to their to-hit and weapon damage rolls."
 
-			])
+			]),
+
+			spellcastingBonus : {
+				spells : ["animate dead"],
+				selection : ["animate dead"],
+			}
 
 		},
 
@@ -186,7 +191,7 @@ ClassList["true necromancer"] = {
 
 				"I gain Resistance to non-magical slashing, peircing, poison and bludgening damage",
 
-				"If damage reduces me to 0 hit points, I can make a Constitution saving throw with a DC of 5+ half the damage taken (rounded up)",
+				"If damage reduces me to 0 hit points, I can make a Constitution saving throw with a DC of 5+", "half the damage taken (rounded up)",
 
 				"On a success, I drop to 1 Hit Point instead, Raidiant and Critical hit damage ignore this ability"
 
@@ -224,7 +229,7 @@ ClassList["true necromancer"] = {
 
 			description : desc([
 
-				"I can create a 80-foot radius area of effect centered on me corpses in the area of effect rise into Skeletons or Zombies immediately",
+				"I can create a 80-foot radius area of effect centered on me corpses in the area of effect rise", "into Skeletons or Zombies immediately",
 
 				"Anyone who dies in the area within the next 12 hours also becomes one of the undead"
 
@@ -281,11 +286,11 @@ ClassSubList["Calling of the pale master"] = {
 
 			description : desc([
 
-				"I can cast Animate Dead at its base level with a casting time of 1 action, for a number of times a day equal to my Intelligence modifier (minimum of 1)"
+				"I can cast Animate Dead at its base level with a casting time of 1 action, for a number of times", "a day equal to my Int modifier (minimum of 1)"
 
 			]),
 
-			usages : "Intelligence modifier per ",
+			usages : "Int modifier per ",
 
 			usagescalc : "event.value = Math.max(1, What('Int Mod'));",
 
@@ -305,7 +310,7 @@ ClassSubList["Calling of the pale master"] = {
 
 				"As an action, each undead within 60 ft that I can see must make a Wisdom saving throw",
 
-				"Undead that fail come under my control for 24 hours, Undead that succeed are immune to the effects for 24 hours"
+				"Undead that fail come under my control for 24 hours, Undead that succeed are immune to", "the effects for 24 hours"
 
 			]),
 
@@ -323,17 +328,17 @@ ClassSubList["Calling of the pale master"] = {
 
 			description : desc([
 
-				"I can preform a ritual permanently loosing 1 point of Constitution and replacing my arm with an undead prosthetic, which may be in skeletal form or preserved flesh stiched into place like that of a Flesh Golem",
+				"I can preform a ritual permanently loosing 1 point of Constitution and replacing my arm with", "an undead prosthetic, which may be in skeletal form or preserved flesh stiched into place like", "that of a Flesh Golem",
 
 				"The graft grants advantage on any Strength d20 rolls and adds +2 to my base armor class",
 
-				"I can make an attack with the Undead Graft, if the attack hits, the target makes a Constitution saving throw or dies and then reanimates one round later as a zombie or skeleton, under my control",
+				"I can make an attack with the Undead Graft, if the attack hits, the target makes a Constitution", "saving throw or dies and then reanimates one round later as a zombie or skeleton, under my", "control",
 
-				"I can use this feature a number of times per day equal to my Constitution modfier (minimum 1) per long rest"
+				"I can use this feature a number of times per day equal to my Con modfier (minimum 1) per", "long rest"
 
 			]),
 
-			usages : "Constitution modifier per ",
+			usages : "Con modifier per ",
 
 			usagescalc : "event.value = Math.max(1, What('Con Mod'));",
 
@@ -351,7 +356,7 @@ ClassSubList["Calling of the pale master"] = {
 
 			description : desc([
 
-				"I can preform a ritual to use my witching hour feature on a creatue huge or smaller"
+				"I can preform a 10 min ritual to use my witching hour feature on a creatue huge or smaller"
 
 			]),
 
