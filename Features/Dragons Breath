@@ -1,0 +1,34 @@
+/*	-INFORMATION-
+	Subject:	Feature
+	Effect:		Adds new feature
+				
+	Sheet:		v12.999 [v12.999 uses 'borrow' for the burrow speed]
+*/
+
+var iFileName = "Features";
+
+RequiredSheetVersion(12.999);
+
+FeatsList["dragon breath"] = {
+
+	name : "Dragons Breath",
+
+	source : ["HB", 0],
+
+	prerequisite : "Being a Dragonborn",
+
+	prereqeval : "CurrentRace.known.indexOf('dragonborn') !== -1",
+
+	description :	"My Breath Weapon has a number of uses egual to 1 + my Con modifier. When I use my Breath Weapon I can expend multiple uses simultaneously increasing the damage by 2d6 per charge. The DC of my Breath Weapon's saving throw is increased by 1. The area of effect of my Breath Weapon is doubled. [+1 Str, Con, or Cha]",
+
+	improvements : "Dragons Breath (feat): +1 Strength, Constitution, or Charisma;",
+
+	action : ["action", ""],
+
+	usages : "Constitution modifier per",
+
+	usagescalc : "event.value = Math.max(1, What('Con Mod') + 1);",
+
+	recovery : "short rest"
+
+};
