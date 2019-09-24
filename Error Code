@@ -1,0 +1,13 @@
+AddWarlockInvocation("Frostbound Armor (prereq: level 5 warlock)", {
+
+	name : "Frostbound Armor",
+
+	description : "\n   " + "I gain proficiency in medium armor and heavy armor, but not shields.",
+
+	source : ["COFSA:TWH", 105],
+
+	armor : [false, true, true, false],
+
+	prereqeval : "classes.known.warlock.subclass === 'warlock-the wild huntsman' && classes.known.warlock.level >= 5"
+
+});
