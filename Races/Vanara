@@ -1,3 +1,10 @@
+/*	-INFORMATION-
+	Subject:	Races
+	Effect:		This script adds a race, Vanara
+	Code by:	Sun Wukong
+	Date:		02/11/2019 (sheet v12.999)
+*/
+
 var iFileName = "Vanara.js";
 
 RequiredSheetVersion(12.999);
