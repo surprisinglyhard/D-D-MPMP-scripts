@@ -1,0 +1,131 @@
+/*	-INFORMATION-
+	Subject:	Races
+	Effect:		This script adds a race, Faun
+	Code by:	MuttonChopBoi
+	Date:		11/22/2018 (sheet v12.998)
+*/
+
+var iFileName = "Faun.js";
+
+RequiredSheetVersion(12.999);
+
+RaceList["Faun"] = {
+
+	regExpSearch : /^(?=.*faun).*$/i,
+	
+	name : "Faun",
+	
+	source : [HB, 0],
+	
+	plural : "Fauns",
+	
+	size : 3,
+	
+	speed : {
+	
+		walk : { spd : 35, enc : 25 }
+	
+	},
+	
+	languageProfs : ["Common", "Sylvan"],
+	
+	vision : ["Darkvision", 60],
+	
+	savetxt : { 
+	
+	        text : [ "Magic can't put me to sleep"],
+	
+	        adv_vs : [ "charmed"]
+	
+	},
+
+	age : "  mature at the rate of humans, but live up to 500 years",
+	
+	height : " stand between 5 and 5.5 feet tall",
+	
+	weight : " weigh around 155 lb)",
+	
+	heightMetric : " stand between 1.5 and 1.65 metres tall",
+	
+	weightMetric : " weigh around 70 kg",
+	
+	improvements : "Faun: +1 Dexterity +2 Charisma;",
+	
+	scores : [0, 1, 0, 0, 0, 2],
+	
+	trait : "Faun (+1 Dexterity, +2 Charisma)\nHeadbutt: I can use my head to make an attack, dealing 1d4 damage of a type determined by my horns.\nFey Magics: I know the Vicious Mockery cantrip.\n   At 3rd level, I can cast the Sleep spell once per long rest as a 2nd-level spell.\n   At 5th level, I can also cast the Charm Person spell once per long rest.\n   Charisma is my spellcasting ability for these spells",
+		
+	spellcastingAbility : 6,
+	
+	spellcastingBonus : {
+
+		name : "Fey Magics (level 1)",
+		
+		spells : ["vicious mockery"],
+
+		selection : ["vicious mockery"],
+		
+		atwill : true,
+
+	},
+	
+	features : {
+		
+		"sleep" : {
+
+			name : "Sleep (2nd level)",
+
+			minlevel : 3,			
+
+			usages : 1,			
+
+			recovery : "long rest",			
+
+			tooltip : " (Fey Magics)",
+
+			action : ["action", ""],
+			
+			spellcastingBonus : {
+
+				name : "Fey Magics (level 3)",
+					
+				spells : ["sleep"],
+				
+				selection : ["sleep"],
+				
+				oncelr : true,
+
+			},
+			
+		},
+		
+		"charm person" : {
+
+			name :  "Charm Person",
+			
+			minlevel : 5,
+			
+			usages : 1,			
+
+			recovery : "long rest",
+
+			tooltip : " (Fey Magics)",
+
+			action : ["action", ""],			
+
+			spellcastingBonus : {
+				
+				name : "Fey Magics (level 5)",
+					
+				spells : ["charm person"],
+				
+				selection : ["charm person"],				
+
+				oncelr : true
+			}
+
+		}	
+
+	}
+
+};
