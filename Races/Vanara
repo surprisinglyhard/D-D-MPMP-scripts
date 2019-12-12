@@ -1,0 +1,51 @@
+var iFileName = "Vanara.js";
+
+RequiredSheetVersion(12.999);
+
+RaceList["Vanara"] = {
+
+	regExpSearch : /^(?=.*vanara).*$/i,
+	
+	name : "Vanara",
+	
+	source : ["HB", 0],
+	
+	plural : "Vanaras",
+	
+	size : 3,
+	
+	speed : {
+	
+	walk : { spd : 35, enc : 25 },
+
+	climb : { spd : "35", enc : 25 }
+	
+	},
+
+	toolProfs : ["Gained from Vanara"],
+	
+	languageProfs : ["Common", "Sylvan"],
+
+	vision : ["Darkvision", 60],
+
+	age : "  mature at the rate of humans, but live up to 200 years",
+	
+	height : " stand between 4.5 and 5 feet tall",
+	
+	weight : " weigh around 65 lb)",
+	
+	heightMetric : " stand between 1.3 and 1.5 metres tall",
+	
+	weightMetric : " weigh around 30 kg",
+	
+	improvements : "Vanara: +2 Dexterity +1 Intelligence;",
+	
+	scores : [0, 2, 0, 1, 0, 0],
+
+	skills : ["Athletics"],
+
+	skillstxt : "Athletics and any 1 skill",
+	
+	trait : "Vanara (+2 Dexterity, +1 Intelligence)\nI am proficient in the Athletics skill. Whenever I make a Strength (Athletics) check to climb, I add double my proficiency bonus to the check, instead of my normal proficiency bonus.\nI have a prehensile tail.\nThe Vanaras' intelligence and curiosity allows them to learn and pick up useful skills they would need in their lifetime. I gain proficiency in one skill of my choice and one proficiency in one tool of my choice."
+
+};
