@@ -23,7 +23,7 @@ ClassList["true necromancer"] = {
 
 	die : 6,
 
-	improvements : [0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5],
+	improvements : [0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 5, 5],
 
 	saves : ["Int", "Con"],
 
@@ -46,7 +46,7 @@ ClassList["true necromancer"] = {
 
 	],
 
-	equipment : "True Necromancer starting equipment:\n \u2022 No armor, a dagger -or- quarter staff , and a Component pouch -or- an arcane focus;\n \u2022 A scholar's pack -or- an explorer's pack.\n\nAlternatively, choose 5d4 \xD7 10 gp worth of starting equipment instead of both the class' and the background's starting equipment.",
+	equipment : "True Necromancer starting equipment:\n \u2022 No armor, a dagger -or- quarter staff ;\n \u2022 A scholar's pack -or- an explorer's pack.\n\nAlternatively, choose 5d4 \xD7 10 gp worth of starting equipment instead of both the class' and the background's starting equipment.",
 
 	subclasses : ["Calling", ["Calling of the pale master"]],
 
@@ -87,13 +87,13 @@ ClassList["true necromancer"] = {
 
 			minlevel : 1,
 
-			description : "\n   " + "I can cast prepared necromancer cantrips/spells, using Intelligence as my spellcasting ability" + "\n   " + "I can use an arcane focus as a spellcasting focus" + "\n   " + "I can cast all necromancer spells in my spellbook as rituals if they have the ritual tag",
+			description : "\n   " + "I can cast prepared necromancer cantrips/spells, using Intelligence as my spellcasting ability" + "\n   " + "I can cast all necromancer spells as rituals if they have the ritual tag",
 	
 		},
 
-		"arcane recovery" : {
+		"power slave" : {
 
-			name : "Arcane Recovery",
+			name : "Power Slave",
 
 			source : [["SRD", 53], ["P", 115]],
 
@@ -113,9 +113,9 @@ ClassList["true necromancer"] = {
 
 		},
 
-		"the dead see dead" : {
+		"don't fear the reaper" : {
 
-			name : "The Dead See Dead",
+			name : "Don't Fear the Reaper",
 
 			source : ["HB", 0],
 
@@ -153,32 +153,39 @@ ClassList["true necromancer"] = {
 
 		},
 
-		"thralls" : {
 
-			name : "Thralls",
+		"heaven and hell" : {
 
-			source : ["HB", 0],
+			name : "Heaven and Hell",
+
+			source : ["HB",0],
 
 			minlevel : 6,
 
 			description : desc([
 
-				"I add Animate Dead to my spellbook and can have an additional target when casting it",
-
-				"Undead created by my necromancy spells add my necromancer level to their HP maximums", "and my proficiency bonus to their to-hit and weapon damage rolls."
+				"I can cast speak with dead at will, without expending a spell slot"
 
 			]),
 
 			spellcastingBonus : {
-				spells : ["animate dead"],
-				selection : ["animate dead"],
+
+				name : "Whispers of the Grave",
+
+				spells : ["speak with dead"],
+
+				selection : ["speak with dead"],
+
+				atwill : true
+
 			}
 
 		},
+	
 
-		"one with death" : {
+		"painkiller" : {
 
-			name : "One With Death",
+			name : "Painkiller",
 
 			source : ["HB",0],
 
@@ -198,9 +205,9 @@ ClassList["true necromancer"] = {
 
 		},
 
-		"unholy constitution" : {
+		"iron man" : {
 
-			name : "Unholy Constitutiom",
+			name : "Iron Man",
 
 			source : ["HB", 0],
 
@@ -216,34 +223,53 @@ ClassList["true necromancer"] = {
 
 		},
 
-		"profaned ground" : {
+		"seek and destroy" : {
 
-			name : "Profaned Ground",
+			name : "Seek and Destroy",
 
 			source : ["HB",0],
 
-			minlevel : 18,
+			minlevel : 14.1,
 
 			description : desc([
 
-				"I can create a 80-foot radius area of effect centered on me corpses in the area of effect rise", "into Skeletons or Zombies immediately",
+				"I can preform a ritual permanently loosing 1 point of Constitution and replacing my arm with", "an undead prosthetic, which may be in skeletal form or preserved flesh stiched into place like", "that of a Flesh Golem",
 
-				"Anyone who dies in the area within the next 12 hours also becomes one of the undead"
+				"The graft grants advantage on any Strength d20 rolls and adds +2 to my base armor class",
+
+				"I can make an attack with the Undead Graft, if the attack hits, the target makes a Constitution", "saving throw or dies and then reanimates one round later as a zombie or skeleton, under my", "control",
+
+				"The target gets the skills, saving throw proficiencies, and statistics of the zombie or skeleton", "while keeping its own, using whichever is higher",
+
+				"I can use this feature a number of times per day equal to my Con modfier (minimum 1) per", "long rest"
 
 			]),
 
-			usages : 1,
+			usages : "Con modifier per ",
+
+			usagescalc : "event.value = Math.max(1, What('Con Mod'));",
 
 			recovery : "long rest"
 
+		},
+
+		"ride the lightning" : {
+
+			name : "Ride the Lightning",
+
+			source : ["HB",0],
+
+			minlevel : 20,
+
+			description : desc([
+
+				"Upon killing a creature I can take an aditional action"
+
+			])
+
 		}
 
-		
-
-
 	}
-
-	
 
 };
 
@@ -272,6 +298,34 @@ ClassSubList["Calling of the pale master"] = {
 			])
 		
 		},
+
+		"subclassfeature6.1" : {
+
+			name : "Among the Living",
+
+			source : ["HB", 0],
+
+			minlevel : 6.1,
+
+			description : desc([
+
+				"I add Animate Dead to my spellcasting list and can have an additional target when casting it",
+
+				"Undead created by my necromancy spells add my necromancer level to their HP maximums", 
+
+				"and my proficiency bonus to their to-hit and weapon damage rolls."
+
+			]),
+
+			spellcastingBonus : {
+
+				spells : ["animate dead"],
+
+				selection : ["animate dead"]
+			}
+
+		},
+
 
 		"subclassfeature7" : {
 
@@ -307,7 +361,9 @@ ClassSubList["Calling of the pale master"] = {
 
 				"As an action, each undead within 60 ft that I can see must make a Wisdom saving throw",
 
-				"Undead that fail come under my control for 24 hours, Undead that succeed are immune to", "the effects for 24 hours"
+				"Undead that fail come under my control for 24 hours, Undead that succeed are immune to", 
+				
+				"the effects for 24 hours"
 
 			]),
 
@@ -315,45 +371,17 @@ ClassSubList["Calling of the pale master"] = {
 
 		},
 
-		"subclassfeature15" : {
-
-			name : "Seek and Destroy",
-
-			source : ["HB",0],
-
-			minlevel : 15,
-
-			description : desc([
-
-				"I can preform a ritual permanently loosing 1 point of Constitution and replacing my arm with", "an undead prosthetic, which may be in skeletal form or preserved flesh stiched into place like", "that of a Flesh Golem",
-
-				"The graft grants advantage on any Strength d20 rolls and adds +2 to my base armor class",
-
-				"I can make an attack with the Undead Graft, if the attack hits, the target makes a Constitution", "saving throw or dies and then reanimates one round later as a zombie or skeleton, under my", "control",
-
-				"I can use this feature a number of times per day equal to my Con modfier (minimum 1) per", "long rest"
-
-			]),
-
-			usages : "Con modifier per ",
-
-			usagescalc : "event.value = Math.max(1, What('Con Mod'));",
-
-			recovery : "long rest"
-
-		},
-
-		"subclassfeature19" : {
+		"subclassfeature18" : {
 
 			name : "Keeper of the Seven Keys",
 
 			source : ["HB",0],
 
-			minlevel : 19,
+			minlevel : 18,
 
 			description : desc([
 
-				"I can preform a 10 min ritual to use my witching hour feature on a creatue huge or smaller"
+				"I can use my witching hour feature on a creatue huge or smaller"
 
 			]),
 
@@ -366,3 +394,132 @@ ClassSubList["Calling of the pale master"] = {
 	}
 
 };
+
+AddSubClass("true necromancer", "reaper", {
+
+	regExpSearch : /^(?=.*reaper).*$/i,
+
+	subname : "Calling of the reaper",
+
+	source : ["HB",0],
+
+	features : {
+
+		"subclassfeature3" : {
+
+			name : "Rust in Peace",
+
+			source : ["HB",0],
+
+			minlevel : 3,
+
+			description : desc([
+
+				"As a bonus action I can mark a target for death. I decrease the targets AC by my proficiency bonus",
+
+				"only one target may be marked at a time"
+
+			]),
+
+			action : ["bonus action", ""]
+		
+		},
+
+		"subclassfeature5" : {
+
+			name : "Reign in Blood",
+
+			source : ["HB",0],
+
+			minlevel : 5,
+
+			description : desc([
+
+				"I can attack a marked target twice, instead of once, whenever I take the Attack action on my turn"
+
+			])
+		
+		},
+
+		"subclassfeature7" : {
+
+			name : "Light Bringer",
+
+			source : ["HB",0],
+
+			minlevel : 7,
+
+			description : desc([
+
+				"When I use my action to cast a cantrip, I can make one weapon attack as a bonus action"
+
+			]),
+			
+			action : ["bonus action", ""]
+		
+		},
+
+		"subclassfeature11" : {
+
+			name : "Transilvanian Hunger",
+
+			source : ["HB",0],
+
+			minlevel : 11,
+
+			description : desc([
+
+				"When I hit a crerature with a mele attack, the creature takes extra necrotic damage equal to my",
+				
+				"Intelligence modifier",
+
+				"I heal for necrotic damage I deal"
+
+			])
+		
+		},
+
+		"subclassfeature15" : {
+
+			name : "Fear of the Dark",
+
+			source : ["HB",0],
+
+			minlevel : 15,
+
+			description : desc([
+
+				"If damage I deal reduces a creature's hit points to 45 or fewer, I deal an extra 45 necrotic damage"
+
+			])
+		
+		},
+
+		"subclassfeature18" : {
+
+			name : "Enter Sandman",
+
+			source : ["HB",0],
+
+			minlevel : 18,
+
+			description : desc([
+
+				"As an action I assume the form of death for 1 min",
+
+				"The first time any enemy creature sees me in this form, the creature must succed a wisdom saving throw or fall into a magical slumber",
+
+				"While in this form I gain the following benifits",
+
+				"Whenever i cast a spell that has a casting time of 1 action, I can cast it using a bonus action instead",
+
+				"As a reaction, I can teleport to a target hexed by me that I can see"
+
+			])
+		
+		}
+
+
+	}
+
+});
