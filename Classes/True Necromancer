@@ -183,9 +183,9 @@ ClassList["true necromancer"] = {
 		},
 	
 
-		"painkiller" : {
+		"ace of spades" : {
 
-			name : "Painkiller",
+			name : "Ace of Spades",
 
 			source : ["HB",0],
 
@@ -193,17 +193,15 @@ ClassList["true necromancer"] = {
 
 			description : desc([
 
-				"I gain Resistance to non-magical slashing, peircing, poison and bludgening damage",
+				"I gain Resistance to non-magical poison damage",
 
-				"If damage reduces me to 0 hit points I can make a Constitution saving throw with a DC of 5+", "half the damage taken (rounded up)",
+				"Once per long rest if damage reduces me to 0 hit points I can make a Constitution saving", "throw with a DC of 5+ half the damage taken (rounded up)",
 
-				"On a success, I drop to 1 Hit Point instead, Raidiant and Critical hit damage ignore this ability",
-
-				"I can use this effect once per long rest"
+				"On a success, I drop to 1 Hit Point instead, Raidiant and Critical hit damage ignore this ability"
 
 			]),
 
-			dmgres : ["Poison","Slashing","Peircing","Bludgening"],
+			dmgres : ["Poison"],
 
 			usages : 1,
 
@@ -235,7 +233,7 @@ ClassList["true necromancer"] = {
 
 			source : ["HB",0],
 
-			minlevel : 14.1,
+			minlevel : 14,
 
 			description : desc([
 
@@ -303,13 +301,13 @@ ClassSubList["Calling of the pale master"] = {
 		
 		},
 
-		"subclassfeature6.1" : {
+		"subclassfeature6" : {
 
 			name : "Among the Living",
 
 			source : ["HB", 0],
 
-			minlevel : 6.1,
+			minlevel : 6,
 
 			description : desc([
 
@@ -341,7 +339,7 @@ ClassSubList["Calling of the pale master"] = {
 
 			description : desc([
 
-				"I can cast Animate Dead at its base level with a casting time of 1 action without expending a spell slot for a number of times a day equal to my Int modifier (minimum of 1)"
+				"I can cast Animate Dead at its base level with a casting time of 1 action without expending a", "spell slot for a number of times a day equal to my Int modifier (minimum of 1)"
 
 			]),
 
@@ -461,6 +459,24 @@ AddSubClass("true necromancer", "reaper", {
 			
 			action : ["bonus action", ""]
 		
+		},
+
+		"subclassfeature10" : {
+
+			name : "Painkiller",
+
+			source : ["HB",0],
+
+			minlevel : 10,
+
+			description : desc([
+
+				"I gain Resistance to non-magical slashing, peircing, and bludgening damage"
+
+			]),
+
+			dmgres : ["Slashing","Peircing","Bludgening"],
+
 		},
 
 		"subclassfeature11" : {
