@@ -205,6 +205,8 @@ ClassList["true necromancer"] = {
 
 			dmgres : ["Poison","Slashing","Peircing","Bludgening"],
 
+			usages : 1,
+
 			recovery : "long rest"
 
 		},
@@ -249,6 +251,8 @@ ClassList["true necromancer"] = {
 
 			]),
 
+			usages : 1,
+
 			recovery : "long rest"
 
 		},
@@ -277,7 +281,7 @@ ClassSubList["Calling of the pale master"] = {
 
 	regExpSearch : /^(?=.*calling)(?=.*of)(?=.*the)(?=.*pale)(?=.*master).*$/i,
 
-	subname : "Calling of the pale master",
+	subname : "Calling of the Pale Master",
 
 	source : ["HB",0],
 
