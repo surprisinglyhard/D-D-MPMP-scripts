@@ -1,7 +1,7 @@
 /*	-INFORMATION-
 	Subject:	Subclass
 
-	Effect:		This script adds a subclass for the Warlock, called "The Loa"
+	Effect:		This script adds a subclass for the Warlock, called ""
 	
 	*/
 
@@ -37,7 +37,9 @@ AddSubClass("warlock", "the loa", {
 
 				"Damage dealt by this effect ignores resistances and immunities"
 
-			])
+			]),
+
+			additional : ["1d10", "2d10", "3d10", "4d10", "5d10", "6d10", "7d10", "8d10", "9d10", "10d10", "11d10", "12d10", "13d10", "14d10", "15d10", "16d10", "17d10", "18d10", "19d10", "20d10"]
 
 		},
 
