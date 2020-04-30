@@ -1,0 +1,128 @@
+/*	-INFORMATION-
+	Subject:	Subclass
+
+	Effect:		This script adds a subclass for the Warlock, called "The Loa"
+	
+	*/
+
+var iFileName = "Warlock - The Loa.js";
+
+RequiredSheetVersion(12.999);
+
+AddSubClass("warlock", "the loa", {
+
+	regExpSearch : /^(?=.*\bthe\b)(?=.*\bloa\b).*$/i,
+
+	subname : "The Loa",
+
+	source : ["HB",0],
+
+	spellcastingExtra : ["bless", "sleep", "locate object", "detect thoughts", "remove curse", "feign death", "death ward", "locate creature", "reincarnate", "scrying"],
+
+	features : {
+
+		"subclassfeature1" : {
+
+			name : "Done Deal",
+
+			source : ["HB",0],
+
+			minlevel : 1,
+
+			description : desc([
+
+				"I may enter a magically binding pack with another creature ",
+				
+				"A creature who breaks the pact suffers my warlock level in d10 necrotic damage", "A creature who dies while their max health is reduced by this effect are consumed by my", "patron",
+
+				"Damage dealt by this effect ignores resistances and immunities"
+
+			])
+
+		},
+
+		"subclassfeature2" : {
+
+			name : "Voodoo",
+
+			source : ["HB",0],
+
+			minlevel : 2,
+
+			description : desc([
+
+				"My eldritch invocations take the form of physical objects valued up to 1 cp", "If an object created by this effect would be destroyed return it to your person", "I can allow a creature I have entered as pact with to use an item created by this effect",
+
+				"As an action I can summon an object created by this effect in my empty hand"
+
+			])
+
+		},
+
+
+		"subclassfeature6" : {
+
+			name : "Vanishing act",
+
+			source : ["HB",0],
+
+			minlevel : 6,
+
+			description : desc([
+
+				"Once per short rest when a creature hits me with a weapon attack I can consume a hit die to", "reduce the attack's damage by 1d8 + my Charisma modifier + my warlock level",
+
+				"If this would reduce the damage to 0 I make the weapon vanish into the ethereal plane"
+
+			])
+
+		},
+
+
+		"subclassfeature10" : {
+
+			name : "Gift From Beyond",
+
+			source : ["HB",0],
+
+			minlevel : 10,
+
+			description : desc([
+
+				"I gain a permanent unseen servant",
+
+				"I gain 2 extra eldritch invocations"
+
+			]),
+
+			additional : ["", "", "", "", "", "", "", "", "", "2 additional invocations known", "2 additional invocations known", "2 additional invocations known", "2 additional invocations known", "2 additional invocations known", "2 additional invocations known", "2 additional invocations known", "2 additional invocations known", "2 additional invocations known", "2 additional invocations known", "2 additional invocations known"]
+
+		},
+
+		"subclassfeature14" : {
+
+			name : "Friends on the Other Side",
+
+			source : ["HB",0],
+
+			minlevel : 14,
+
+			description : desc([
+
+				"As an action once per long rest I may summon 6 shadows for an hour", "these shadows act on my initiative the turn they are summoned", 
+
+				"these shadows have an int score of 18, understand all langauges I understand, and can", "communicate telepathically with me", "as a bonus action I can give the shadows a command",
+
+				"Shadows created by this effect add my warlock level to their HP maximums", "and my proficiency bonus to their to-hit."
+
+			]),
+
+			recovery : "long rest",
+
+			action : ["action", ""]
+
+		}
+
+	}
+
+});
