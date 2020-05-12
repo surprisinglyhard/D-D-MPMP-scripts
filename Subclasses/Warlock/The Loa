@@ -30,10 +30,15 @@ AddSubClass("warlock", "the loa", {
 			minlevel : 1,
 
 			description : desc([
+			
 				"I may enter a magically binding pact with another creature.",
+				
 				"A creature who breaks the pact suffers my warlock level in d10 necrotic damage.", 
+				
 				"A creature who dies while their max health is reduced by this effect are consumed by my", 
+				
 				"patron.",
+				
 				"Damage dealt by this effect ignores resistances and immunities."
 			]),
 
@@ -50,10 +55,15 @@ AddSubClass("warlock", "the loa", {
 			minlevel : 2,
 
 			description : desc([
+			
 				"My eldritch invocations take the form of physical objects valued up to 1 cp.", 
+				
 				"If an object created by this effect would be destroyed, return it to my person.", 
+				
 				"I can allow a creature I have entered as pact with to use an item created by this effect.",
+				
 				"As an action, I can summon an object created by this effect to my empty hand."
+				
 			])
 
 		},
@@ -67,9 +77,13 @@ AddSubClass("warlock", "the loa", {
 			minlevel : 6,
 
 			description : desc([
+			
 				"Once per short rest when a creature hits me with a weapon attack I can consume a hit die to",
+				
 				"reduce the attack's damage by 1d8 + my Charisma modifier + my warlock level.",
+				
 				"If this would reduce the damage to 0, I make the weapon vanish into the ethereal plane."
+				
 			]),
 
 			recovery : "short rest",
@@ -89,16 +103,25 @@ AddSubClass("warlock", "the loa", {
 			minlevel : 10,
 
 			spellcastingBonus : {
+			
 				name : "Gift From Beyond",
+				
 				spells : ["unseen servant"],
+				
 				selection : ["unseen servant"],
+				
 				firstCol : "atwill"
+				
 			},
 
 			description : desc([
+			
 				"I can cast unseen servant at will without expending a spell slot.",
+				
 				"The unseen servant will remain active until dispelled.",
+				
 				"I gain 2 additional eldritch invocations."
+				
 			]),
 
 			additional : ["", "", "", "", "", "", "", "", "", "2 additional invocations known", "2 additional invocations known", "2 additional invocations known", "2 additional invocations known", "2 additional invocations known", "2 additional invocations known", "2 additional invocations known", "2 additional invocations known", "2 additional invocations known", "2 additional invocations known", "2 additional invocations known"]
@@ -114,13 +137,21 @@ AddSubClass("warlock", "the loa", {
 			minlevel : 14,
 
 			description : desc([
+			
 				"As an action, once per long rest I may summon 6 shadows for an hour.", 
+				
 				"These shadows act on my initiative the turn they are summoned.", 
+				
 				"These shadows have an Int score of 18, understand all langauges I understand, and can", 
+				
 				"communicate telepathically with me", 
+				
 				"As a bonus action I can give the shadows a command.",
+				
 				"Shadows created by this effect add my warlock level to their HP maximums", 
+				
 				"and my proficiency bonus to their to-hit."
+				
 			]),
 
 			recovery : "long rest",
