@@ -1,0 +1,315 @@
+/*	-INFORMATION-
+	Subject:	Subclass & Warlock's Eldritch Invocations
+
+	Effect:		This script adds a subclass for the Warlock, called "The Wild Huntsman"
+
+				This script also adds 7 new Eldritch Invocations for the Warlock
+	
+	*/
+
+var iFileName = "Warlock - The Wild Huntsman.js";
+
+RequiredSheetVersion(12.999);
+
+SourceList["COFSA:TWH"] = {
+
+	name : "Compendium of Forgotten Secrets Awakening: The Wild Huntsman",
+
+	abbreviation : "COFSA:TWH",
+
+	group : "Compendium",
+
+	url : "https://www.genfantasypress.com/",
+
+	date : "2018/09/09"
+};
+
+AddSubClass("warlock", "the wild huntsman", {
+
+	regExpSearch : /^(?=.*\bthe\b)(?=.*\bwild\b)(?=.*\bhuntsman\b).*$/i,
+
+	subname : "The Wild Huntsman",
+
+	source : ["COFSA:TWH", 103],
+
+	spellcastingExtra : ["hunter's mark", "hunter's pace", "pass without trace", "wolfbane trap", "frozen lance", "haste", "dominate beast", "locate creature", "cone of cold", "nemesis"],
+
+	features : {
+
+		"subclassfeature1" : {
+
+			name : "Huntsman's Disciple",
+
+			source : ["COFSA:TWH", 103],
+
+			minlevel : 1,
+
+			description : desc([
+
+				"I gain proficiency in the Survival skill.",
+
+				"When I encounter the tracks of a creature, I can summon a spiritual hound to lead me,",
+
+				"granting me advantage on checks to track my quarry.",
+
+				"It can track targets over water and by scent.",
+
+				"The spiritual hound disappears if I roll initiative."
+
+			])
+
+		},
+
+		"subclassfeature1.1" : {
+
+			name : "Black Ice",
+
+			source : ["COFSA:TWH", 103],
+
+			minlevel : 1,
+
+			description : desc([
+
+				"I can call on my connection to the cold winds of the blizzard to carry me to my prey,",
+
+				"closing off their escape.",
+
+				"As a bonus action, I can move up to 30 feet toward a hostile creature I can see. If I'm", 
+
+				"mounted, my mount can move instead of me.",
+
+				"If I make an attack roll targeting the creature before the end of this turn, polished ice forms in",
+
+				"a 5-foot radius centered on the creature, creating difficult terrain that lasts until the start of",
+
+				"my next turn.",
+
+				"I ignore difficult terrain created by this effect."
+
+			]),
+
+			action : ["bonus action", ""]
+
+		},
+
+		"subclassfeature6" : {
+
+			name : "Pale Rider",
+
+			source : ["COFSA:TWH", 103],
+
+			minlevel : 6,
+
+			description : desc([
+
+				"I can cast find steed without expending a spell slot.",
+
+				"When cast in this way, its casting time is one action, and I can choose to have the steed", 
+
+				"appear underneath me, moving me instantly to the saddle.",
+
+				"While I am mounted on the steed, I can choose to redirect any damage that it would take to", 
+
+				"myself.",
+
+				"My steed does not recover hit points whenever I cast the spell again, but does recover all lost", 
+
+				"hit points whenever I finish a short or long rest.",
+
+				"If my steed has been reduced to 0 hit points, it cannot be summoned again using this feature", 
+
+				"until I finish a long rest."
+
+			]),
+
+			action : ["action", ""],
+
+			spellcastingBonus : {
+
+				spells : ["find steed"],
+
+				selection : ["find steed"]
+
+			}
+
+		},
+
+		"subclassfeature10" : {
+
+			name : "Hounds of the Hunt",
+
+			source : ["COFSA:TWH", 103],
+
+			minlevel : 10,
+
+			description : desc([
+
+				"I gain resistance to cold damage, and am not subject to exhaustion gained from cold", 
+
+				"environments or high altitudes.",
+
+				"I can summon a pack of the Huntsman's hounds to an empty space within 30 feet of me.",
+
+				"These hounds understand my commands and obey me without hesitation. The hounds act on", 
+
+				"my initiative count.",
+
+				"They also gain additional maximum hit points equal to my warlock level. Whenever my pack is", 
+
+				"reduced to 0 hit points, they vanish into frozen mist.",
+
+				"I can also dismiss my hounds at any time as an action, causing them to disappear. If my pack", 
+
+				"has been reduced to 0 hit points, it cannot be summoned again until I finish a long rest.",
+
+				"The hounds recover all lost hit points whenever I finish a long rest."
+
+			]),
+
+			recovery : "long rest",
+
+			action : ["action", ""],
+
+			dmgres : ["Cold"]
+
+		},
+
+		"subclassfeature14" : {
+
+			name : "Fimbulwinter",
+
+			source : ["COFSA:TWH", 103],
+
+			minlevel : 14,
+
+			description : desc([
+
+				"My steed, My hounds, and I ignore difficult terrain while in cold regions, and my hounds and", 
+
+				"steed also gain resistance to cold damage.",
+
+				"While I am in a cold region, me and creatures I control emit a magical aura that creates icy", 
+
+				"difficult terrain in a 10-foot radius.",
+
+				"Whenever I finish a long rest, I can choose to perform a ritual that will gradually change the", 
+
+				"climate in a 10-mile radius to become cold and snowbound by an unnatural blizzard for",
+
+				 "24 hours.",
+
+				"This needs to be performed only once in mountainous or cold environments, twice in", 
+
+				"temperate regions, or three times in warm, tropical lands to take effect.",
+
+				"Creatures not native to the cold have disadvantage on Survival and Perception checks while", 
+
+				"within the area of your Fimbulwinter once it reaches full effect.",
+
+				"Creatures of my choosing are immune to this effect and to any exhaustion from being", 
+
+				"exposed to a cold environment.",
+
+				"If I fail to perform this ritual again before the effect fades, the blizzard will cease one hour", 
+
+				"later, and the snow and ice will melt as normal."
+
+			])
+
+		}
+
+	}
+
+});
+
+
+
+//add the invocations
+
+AddWarlockInvocation("Bitterchill Blast", {
+
+	name : "Bitterchill Blast",
+
+	description : "\n   " + "My Black Ice feature can now be triggered when I cast a cantrip that requires a saving throw. When I use my Black Ice feature, I can choose to have the attack or cantrip inflict cold damage instead of the normal type. When I do and the target takes damage, it cannot benefit from features or effects that allow it to ignore difficult terrain until the start of my next turn.",
+
+	source : ["COFSA:TWH", 104],
+
+	prereqeval : "classes.known.warlock.subclass === 'warlock-the wild huntsman'"
+
+});
+
+AddWarlockInvocation("Chronicle of Winters Past", {
+
+	name : "Chronicle of Winters Past",
+
+	description : "\n   " + "I can use an action to infuse myself with the cruel bite of ice from ages long past. For one minute, cold damage I deal ignores immunities and resistances. I also gain immunity to cold damage for the duration.",
+
+	source : ["COFSA:TWH", 105],
+
+	prereqeval : "classes.known.warlock.subclass === 'warlock-the wild huntsman' && What('Class Features Remember').indexOf('warlock,pact boon,pact of the tome') !== -1"
+
+});
+
+AddWarlockInvocation("Frostbound Armor (prereq: level 5 warlock)", {
+
+	name : "Frostbound Armor",
+
+	description : "\n   " + "I gain proficiency in medium armor and heavy armor, but not shields.",
+
+	source : ["COFSA:TWH", 105],
+
+	prereqeval : "classes.known.warlock.subclass === 'warlock-the wild huntsman' && classes.known.warlock.level >= 5"
+
+});
+
+AddWarlockInvocation("Grim Harvester", {
+
+	name : "Grim Harvester",
+
+	description : "\n   " + "I can use my action to take a trophy from a corpse, filling it with a fraction of the soul of my prey until the next dawn. I can siphon the spiritual energy from the trophy as a reaction to gain advantage on one single attack roll, skill check, or saving throw of my choosing. Each trophy can be used only once.",
+
+	source : ["COFSA:TWH", 105],
+
+	usages : 2,
+
+	recovery : "short rest",
+
+	prereqeval : "classes.known.warlock.subclass === 'warlock-the wild huntsman'"
+
+});
+
+AddWarlockInvocation("Lord of Beasts (prereq: level 13 warlock)", {
+
+	name : "Lord of Beasts",
+
+	description : "\n   " + "My hounds gain a bonus to their attack and damage rolls equal to half my Charisma modifier, and the saving throw associated with my hound’s attacks equals 8 + my proficiency bonus + half my Charisma modifier (rounded up). If I have a familiar, it also gains these bonuses.",
+
+	source : ["COFSA:TWH", 105],
+
+	prereqeval : "classes.known.warlock.subclass === 'warlock-the wild huntsman' && classes.known.warlock.level >= 13"
+
+});
+
+AddWarlockInvocation("Seeker of Prey", {
+
+	name : "Seeker of Prey",
+
+	description : "\n   " + "When I have a harrowing hawk as My familiar, it gains additional maximum hit points equal to my warlock level, I can communicate telepathically with my hounds and steed from up to ten miles away, and I can perceive through their senses in the same way I can with my familiar.",
+
+	source : ["COFSA:TWH", 105],
+
+	prereqeval : "classes.known.warlock.subclass === 'warlock-the wild huntsman' && What('Class Features Remember').indexOf('warlock,pact boon,pact of the chain') !== -1"
+
+});
+
+AddWarlockInvocation("Slayer's Armory", {
+
+	name : "Slayer’s Armory",
+
+	description : "\n   " + "I can now create any simple or martial weapon from blackened cold iron and the bone of ancient beasts using my Pact of the Blade feature. If this weapon is a ranged weapon, it instantly creates ammunition when used. Whenever I hit a creature with this weapon while they are the subject of hunter’s mark, the target takes 1d6 additional cold damage. I can choose to use Strength for attack and damage rolls with this pact weapon, even if it is ranged.",
+
+	source : ["COFSA:TWH", 105],
+
+	prereqeval : "classes.known.warlock.subclass === 'warlock-the wild huntsman' && What('Class Features Remember').indexOf('warlock,pact boon,pact of the blade') !== -1"
+
+});
