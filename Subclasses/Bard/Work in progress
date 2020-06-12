@@ -62,10 +62,10 @@ AddSubClass("bard", "college of metal", {
 			source : ["HB", 0],
 			minlevel : 14,
 			description : desc([
-				"As a bonus action, I may expend all my Bardic Inspiration as additional damage die",
+				"As a action, I may expend all my Bardic Inspiration as additional damage die on a weapon attack",
 				"If this kills a creature I am refunded the die uses and all creatures in line of sight of the slain creature must make a wisdom saving throw or be frighten of me",
 			]),
-			action : ["bonus action", ""]
+			action : ["action", ""]
 		}
 	}
 });
