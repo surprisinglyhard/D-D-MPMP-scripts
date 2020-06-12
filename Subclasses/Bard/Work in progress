@@ -39,21 +39,20 @@ AddSubClass("bard", "college of metal", {
 			minlevel : 3,
 			description : desc([
 				"I have +2 AC when not wearing heavy armor or wielding a shield",
-				"This bonus goes away when I'm grappled, incapacitated, prone, or restrained",
+				"This bonus goes away when I'm grappled, incapacitated, prone, or restrained"
 			]),
 			eval : "AddACMisc(2, 'MOSH PIT CHAMPION', \"I have +2 AC when not wearing heavy armor or wielding a shield, and while I'm not grappled, incapacitated, prone, or restrained\", \"ACshield || tDoc.getField('Heavy Armor').isBoxChecked(0)\");",
-			removeeval : "AddACMisc(0, 'Dance of Defense', \"I have +2 AC when not wearing heavy armor or wielding a shield, and while I'm not grappled, incapacitated, prone, or restrained\");"
+			removeeval : "AddACMisc(0, 'MOSH PIT CHAMPION', \"I have +2 AC when not wearing heavy armor or wielding a shield, and while I'm not grappled, incapacitated, prone, or restrained\");"
 		},
 		"subclassfeature6" : {
 			name : "POWER CORD",
 			source : ["HB", 0],
 			minlevel : 6,
 			description : "\n   " + "My Bardic Inspiration can also be used to add the die to a weapon damage rolls untill the end of my turn"
-
 		},
-		subclassfeature6.1" : {
+		"subclassfeature6.1" : {
 			name : "PEACE SELLS BUT WHO'S BUYING",
-			source : ["MTC:CB", 0],
+			source : ["HB", 0],
 			minlevel : 6,
 			description : "\n   " + "My concentration on bard spells or abilities can't be broken by taking damage"
 		},
@@ -63,7 +62,7 @@ AddSubClass("bard", "college of metal", {
 			minlevel : 14,
 			description : desc([
 				"As a action, I may expend all my Bardic Inspiration as additional damage die on a weapon attack",
-				"If this kills a creature I am refunded the die uses and all creatures in line of sight of the slain creature must make a wisdom saving throw or be frighten of me",
+				"If this kills a creature I am refunded the die uses and all creatures in line of sight of the slain creature must make a wisdom saving throw or be frighten of me"
 			]),
 			action : ["action", ""]
 		}
