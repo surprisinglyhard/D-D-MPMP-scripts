@@ -48,7 +48,7 @@ AddSubClass("bard", "college of metal", {
 			name : "POWER CORD",
 			source : ["HB", 0],
 			minlevel : 6,
-			description : "\n   " + "My Bardic Inspiration can also be used to add the die to a weapon damage rolls untill the end of my turn"
+			description : "\n   " + "I can use my Bardic Inspiration to add the die to weapon damage rolls until my turn's end"
 		},
 		"subclassfeature6.1" : {
 			name : "PEACE SELLS BUT WHO'S BUYING",
@@ -61,8 +61,9 @@ AddSubClass("bard", "college of metal", {
 			source : ["HB", 0],
 			minlevel : 14,
 			description : desc([
-				"As a action, I may expend all my Bardic Inspiration as additional damage die on a melee attack",
-				"If this kills a creature I am refunded the die uses and all creatures in line of sight of the slain creature must make a wisdom saving throw or be frighten of me"
+				"As an action, I may expend all Bardic Inspiration die as additional damage on a melee attack",
+				"If this kills a creature I am refunded the die uses and all creatures in line of sight of the slain",
+				"creature must make a wisdom saving throw or be frightened of me"
 			]),
 			action : ["action", ""]
 		}
