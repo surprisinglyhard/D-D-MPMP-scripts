@@ -52,7 +52,7 @@ AddSubClass("bard", "college of metal", {
 
 		},
 		subclassfeature6.1" : {
-			name : "",
+			name : "PEACE SELLS BUT WHO'S BUYING",
 			source : ["MTC:CB", 0],
 			minlevel : 6,
 			description : "\n   " + "My concentration on bard spells or abilities can't be broken by taking damage"
