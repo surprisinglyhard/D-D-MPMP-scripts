@@ -1,0 +1,71 @@
+/*	-WHAT IS THIS?-
+	This file adds optional material to "MPMB's Character Record Sheet" found at https://flapkan.com/mpmb/charsheets
+	Import this file using the "Add Extra Materials" bookmark.
+
+	-KEEP IN MIND-
+	It is recommended to enter the code in a fresh sheet before adding any other information (i.e. before making your character with it).
+*/
+
+/*	-INFORMATION-
+	Subject:	Subclass
+	Effect:		This script adds a subclass for the Bard, called "College of METAL"
+	Code by:	SurprisinglyHard
+	Date:		2020-06-12 (sheet v12.999)
+	
+*/
+
+var iFileName = "Bard - College of METAL.js";
+RequiredSheetVersion(12.999);
+
+AddSubClass("bard", "college of metal", {
+	regExpSearch : /^(?=.*\bcollege\b)(?=.*\bof\b)(?=.*\bmetal\b).*$/i,
+	subname : "College of METAL",
+	source : ["HB", 0],
+	attacks : [1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
+	features : {
+		"subclassfeature3" : {
+			name : "ADRENALINE RUSH",
+			source : ["HB", 0],
+			minlevel : 1,
+			description : "\n   " + "When I use the Attack action, I can make a weapon attack as a bonus action",
+			usages : "Strength modifier per ",
+			usagescalc : "event.value = Math.max(1, What('Str Mod'));",
+			recovery : "long rest",
+			action : ["bonus action", " (with Attack action)"]
+		},
+		"subclassfeature3.1" : {
+			name : "MOSH PIT CHAMPION",
+			source : ["HB", 0],
+			minlevel : 3,
+			description : desc([
+				"I have +2 AC when not wearing heavy armor or wielding a shield",
+				"This bonus goes away when I'm grappled, incapacitated, prone, or restrained",
+			]),
+			eval : "AddACMisc(2, 'MOSH PIT CHAMPION', \"I have +2 AC when not wearing heavy armor or wielding a shield, and while I'm not grappled, incapacitated, prone, or restrained\", \"ACshield || tDoc.getField('Heavy Armor').isBoxChecked(0)\");",
+			removeeval : "AddACMisc(0, 'Dance of Defense', \"I have +2 AC when not wearing heavy armor or wielding a shield, and while I'm not grappled, incapacitated, prone, or restrained\");"
+		},
+		"subclassfeature6" : {
+			name : "POWER CORD",
+			source : ["HB", 0],
+			minlevel : 6,
+			description : "\n   " + "My Bardic Inspiration can also be used to add the die to a weapon damage rolls untill the end of my turn"
+
+		},
+		subclassfeature6.1" : {
+			name : "",
+			source : ["MTC:CB", 0],
+			minlevel : 6,
+			description : "\n   " + "My concentration on bard spells or abilities can't be broken by taking damage"
+		},
+		"subclassfeature14" : {
+			name : "RIP AND TEAR",
+			source : ["HB", 0],
+			minlevel : 14,
+			description : desc([
+				"As an action, I may expend all my Bardic Inspiration as additional damage die",
+				"If this kills a creature I am refunded the die uses and all creatures in line of sight of the slain creature must make a wisdom saving throw or be frighten of me",
+			]),
+			action : ["action", ""]
+		}
+	}
+});
