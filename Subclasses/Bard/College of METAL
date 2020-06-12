@@ -26,7 +26,7 @@ AddSubClass("bard", "college of metal", {
 		"subclassfeature3" : {
 			name : "ADRENALINE RUSH",
 			source : ["HB", 0],
-			minlevel : 1,
+			minlevel : 3,
 			description : "\n   " + "When I use the Attack action, I can make a weapon attack as a bonus action",
 			usages : "Strength modifier per ",
 			usagescalc : "event.value = Math.max(1, What('Str Mod'));",
