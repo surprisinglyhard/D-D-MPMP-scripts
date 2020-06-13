@@ -66,8 +66,8 @@ AddSubClass("bard", "college of metal", {
 			description : desc([
 				"As an action, I may expend all Bardic Inspiration die and make a melee attack",
 				"The Bardic Inspiration dice are added as aditional dice and deal force damage",
-				"If this kills a creature I am refunded the die uses and all creatures in line of sight of the slain",
-				"creature must make a wisdom saving throw or be frightened of me (DC 8 + Cha mod + Prof bonus)"
+				"If this kills a creature I am refunded the die uses and all creatures in line of sight",
+				"must make a wisdom saving throw or be frightened of me (DC 8 + Cha mod + Prof bonus)"
 			]),
 			action : ["action", ""]
 		}
