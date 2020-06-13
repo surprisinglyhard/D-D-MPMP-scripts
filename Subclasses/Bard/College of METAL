@@ -49,7 +49,7 @@ AddSubClass("bard", "college of metal", {
 			source : ["HB", 0],
 			minlevel : 6,
 			description : desc([
-				"As part of my attack action I may expend a Bardic Inspiration die",
+				"As part of my attack action, I may expend a Bardic Inspiration die",
 				"The die is added to all my melee attacks until my turn's end"
 			])
 		},
@@ -64,7 +64,8 @@ AddSubClass("bard", "college of metal", {
 			source : ["HB", 0],
 			minlevel : 14,
 			description : desc([
-				"As an action, I may expend all Bardic Inspiration die as additional damage on a melee attack",
+				"As an action, I may expend all Bardic Inspiration die and make a melee attack",
+				"The Bardic Inspiration dice are added as aditional dice and deal force damage",
 				"If this kills a creature I am refunded the die uses and all creatures in line of sight of the slain",
 				"creature must make a wisdom saving throw or be frightened of me"
 			]),
