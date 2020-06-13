@@ -48,7 +48,10 @@ AddSubClass("bard", "college of metal", {
 			name : "POWER CORD",
 			source : ["HB", 0],
 			minlevel : 6,
-			description : "\n   " + "I can use my Bardic Inspiration to add the die to weapon damage rolls until my turn's end"
+			description : desc([
+				"As part of my attack action I may expend a Bardic Inspiration die",
+				"The die is added to all my melee attacks until my turn's end"
+			])
 		},
 		"subclassfeature6.1" : {
 			name : "PEACE SELLS BUT WHO'S BUYING",
