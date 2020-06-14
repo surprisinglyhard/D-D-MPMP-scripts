@@ -39,8 +39,10 @@ AddSubClass("bard", "college of metal", {
 			minlevel : 3,
 			description : desc([
 				"I have +2 AC when not wearing heavy armor or wielding a shield",
-				"This bonus goes away when I'm grappled, incapacitated, prone, or restrained"
+				"This bonus goes away when I'm grappled, incapacitated, prone, or restrained",
+				"I also gain proficiency with martial weapons"
 			]),
+			weapons : [false, true],
 			eval : "AddACMisc(2, 'MOSH PIT CHAMPION', \"I have +2 AC when not wearing heavy armor or wielding a shield, and while I'm not grappled, incapacitated, prone, or restrained\", \"ACshield || tDoc.getField('Heavy Armor').isBoxChecked(0)\");",
 			removeeval : "AddACMisc(0, 'MOSH PIT CHAMPION', \"I have +2 AC when not wearing heavy armor or wielding a shield, and while I'm not grappled, incapacitated, prone, or restrained\");"
 		},
