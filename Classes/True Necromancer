@@ -312,13 +312,13 @@ ClassSubList["Calling of the pale master"] = {
 
 			description : desc([
 
-				"when you reduce a humanoid creature to 0 hp with necrotic damage you can choose to have",
+				"When I reduce a humanoid creature to 0 hp with necrotic damage I can choose to have",
 
-				"that creature roll a Constitution saving throw against your spell save DC. A creature ",
+				"that creature roll a Constitution saving throw against my spell save DC. A creature ",
 
-				"that fails the saving throw rises at the start of your next turn as a zombie or skeleton that",
+				"that fails the saving throw rises at the start of my next turn as a zombie or skeleton that",
 
-				"is under your control, unless the humanoid you killed is CR 9 or higher at which point it rises",
+				"is under my control, unless the humanoid I killed is CR 9 or higher at which point it rises",
 
 				"as a wight. On a successful save, the creature is immune to this effect for 24 hours."
 
