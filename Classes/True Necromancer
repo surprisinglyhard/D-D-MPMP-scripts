@@ -129,7 +129,7 @@ ClassList["true necromancer"] = {
 
 				"On a failed save the creature must choose a new target or forfeit targeting me potentially", "wasting the attack or spell",
 
-				"The undead becomes immune to this effect for 24 hours it succeeds the saving throw or I", "target it with an harmful attack or spell"
+				"The undead becomes immune to this effect for 24 hours if it succeeds the saving throw or I", "target it with an harmful attack or spell"
 
 			]),
 
@@ -197,7 +197,7 @@ ClassList["true necromancer"] = {
 
 				"Once per long rest if damage reduces me to 0 hit points I can make a Constitution saving", "throw with a DC of 5+ half the damage taken (rounded up)",
 
-				"On a success, I drop to 1 Hit Point instead, Raidiant and Critical hit damage ignore this ability"
+				"On a success, I drop to 1 Hit Point instead, Radiant and Critical hit damage ignore this ability"
 
 			]),
 
@@ -502,7 +502,7 @@ AddSubClass("true necromancer", "reaper", {
 
 			description : desc([
 
-				"I gain Resistance to non-magical slashing, peircing, and bludgening damage"
+				"I gain Resistance to non-magical slashing, piercing and bludgeoning damage"
 
 			]),
 
@@ -520,11 +520,11 @@ AddSubClass("true necromancer", "reaper", {
 
 			description : desc([
 
-				"When I hit a crerature with a mele attack, the creature takes extra necrotic damage equal to my",
+				"When I hit a crerature with a melee attack, the creature takes extra necrotic damage equal to my",
 				
 				"Intelligence modifier",
 
-				"I heal for necrotic damage I deal with meele attacks"
+				"I heal for necrotic damage I deal with melee attacks"
 
 			])
 		
@@ -558,7 +558,7 @@ AddSubClass("true necromancer", "reaper", {
 
 				"As an action I assume the form of death for 1 min once per long rest",
 
-				"The first time any enemy creature sees me in this form, the creature must succed a wisdom saving throw or fall into a magical slumber",
+				"The first time any enemy creature sees me in this form, the creature must succeed a wisdom saving throw or fall into a magical slumber",
 
 				"While in this form I gain the following benifits",
 
@@ -568,7 +568,7 @@ AddSubClass("true necromancer", "reaper", {
 
 				" • I gain a flying speed equal to my walking speed and can hover",
 
-				" • Move through creatures/objects as difficult terrain; 1d10 force damage if end turn in"
+				" • I can move through creatures/objects as difficult terrain; 1d10 force damage if I end turn within"
 
 			]),
 
