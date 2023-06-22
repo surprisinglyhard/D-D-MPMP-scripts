@@ -301,7 +301,32 @@ ClassSubList["Calling of the pale master"] = {
 		
 		},
 
-		"subclassfeature6" : {
+
+		"subclassfeature3.1" : {
+
+			name : "Fear of the Fallen",
+
+			source : ["HB",0],
+
+			minlevel : 3,
+
+			description : desc([
+
+				"when you reduce a humanoid creature to 0 hp with necrotic damage you can choose to have"
+
+				"that creature roll a Constitution saving throw against your spell save DC. A creature "
+
+				"that fails the saving throw rises at the start of your next turn as a zombie or skeleton that"
+
+				"is under your control, unless the humanoid you killed is CR 9 or higher at which point it rises"
+
+				"as a wight. On a successful save, the creature is immune to this effect for 24 hours."
+
+			])
+		
+		},
+
+		"subclassfeature6.1" : {
 
 			name : "Among the Living",
 
@@ -531,9 +556,13 @@ AddSubClass("true necromancer", "reaper", {
 
 				"While in this form I gain the following benifits",
 
-				"Whenever i cast a spell that has a casting time of 1 action, I can cast it using a bonus action instead",
+				" • Whenever I cast a spell that has a casting time of 1 action, I can cast it using a bonus action instead",
 
-				"As a reaction, I can teleport within 5ft of a target marked by me that I can see"
+				" • As a reaction, I can teleport within 5ft of a target marked by me that I can see",
+
+				" • I gain a flying speed equal to my walking speed and can hover",
+
+				" • Move through creatures/objects as difficult terrain; 1d10 force damage if end turn in"
 
 			]),
 
