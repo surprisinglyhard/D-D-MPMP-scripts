@@ -1,0 +1,232 @@
+/*	-INFORMATION-
+	Subject:	Subclass
+
+	Effect:		This script adds a subclass for the Druid class, called "Circle of the Wyrm"
+  https://www.dmsguild.com/product/203466/Circle-of-the-Wyrm--Druid-Archetypes-5e
+	
+	*/
+
+var iFileName = "Druid - Circle of the Wyrm.js";
+
+RequiredSheetVersion(12.999);
+
+SourceList["HB"];
+
+AddSubClass("druid", "circle of the wyrm", {
+
+	regExpSearch : /^(?=.*\bcircle\b)(?=.*\bof\b)(?=.*\bthe\b)(?=.*\bwyrm\b).*$/i,
+
+	subname : "Circle of the Wyrm",
+
+	source : ["HB"],
+
+	features : {
+
+		"subclassfeature2" : {
+
+			name : "Draconic",
+
+			source : ["HB"],
+
+			minlevel : 2,
+
+			description : desc([
+
+				"When you choose this circle at 2nd level,",
+
+				"you gain Draconic as a language if you do not have it already."
+
+			])
+
+		},
+
+		"subclassfeature2.dragonshape" : {
+
+			name : "Dragon Shape",
+
+			source : ["HB"],
+
+			minlevel : 2,
+
+			description : desc([
+
+				"As an action, I assume the shape of a beast I have seen before with the following rules:",
+
+				"You can use your Wild Shape to transform into creatures of the Dragon variety up to CR 1.",
+
+				"You may ignore movement type restrictions for your wild shape; however, you may not utilize",
+
+				"a dragon’s fly speed while in dragon form until you reach level 8. Additionally, while in",
+
+				"dragon form, you may use your breath weapon twice before you must recharge your breath",
+
+				"weapon on a short or long rest. Dragon Shape also becomes particularly taxing; you may only",
+
+				"recharge Dragon Shapes on a long rest. You may not cast spells through innate spell casting",
+
+				"or any other means until 18th level when spell casting becomes available to you through the",
+
+				"Beast Spells Druid Class Feature, such as the faerie dragon's ability to cast certain spells",
+
+				"once per day. Starting at 6th level, you can transform into a form with a challenge rating as",
+
+				"high as your druid level divided by 3, rounded down."
+
+			]),
+
+			usages : [0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, "\u221E\xD7 per "],
+
+			recovery : "long rest",
+
+			additional : levels.map(function (n) {
+					if (n < 2) return "";
+					var cr = n < 6 ? "1" : Math.floor(n/3);
+					var hr = Math.floor(n/2);
+					var restr = n < 8 ? ", no fly" : "";
+					return "CR " + cr + restr + "; " + hr + (restr.length ? " h" : " hours");
+				}),
+
+			action : [["action", " (start)"], ["bonus action", " (end)"]]
+
+		},
+
+		"subclassfeature6" : {
+
+			name : "Favored Identity",
+
+			source : ["HB"],
+
+			minlevel : 6,
+
+			description : desc([
+
+				"You may add double your proficiency bonus to ability checks that involve ",
+
+				"conversing with, recalling information about, or identifying dragons."
+
+			])
+
+		},
+
+		"subclassfeature6.1" : {
+
+			name : "Tooth and Claw",
+
+			source : ["HB"],
+
+			minlevel : 6,
+
+			description : desc([
+
+				"Your attacks in dragon form count as magical for the purpose ",
+
+				"of overcoming resistance and immunity to non-magical attacks and damage."
+
+			])
+
+		},
+
+		"subclassfeature10" : {
+
+			name : "True Dragon",
+
+			source : ["HB"],
+
+			minlevel : 10,
+
+			description : desc([
+
+				"you may spend both uses of Dragon Shape to transform into a Young Dragon or Wyvern.",
+
+				"However, Dragon Shaping this way causes levels of exhaustion equal to half the dragon's",
+
+				"CR, rounded down."
+
+			])
+
+
+		},
+
+		"subclassfeature10.Wyrm Heal" : {
+
+			name : "Wyrm Heal",
+
+			source : ["HB"],
+
+			minlevel : 10,
+
+			description : desc([
+
+				"During each short rest, you may attempt to reduce your exhaustion level by one level ",
+
+				"by rolling your Wyrm die. You successfully lower your level of exhaustion by one level if ",
+
+				"your Wyrm die lands on a one or two. This ability has no effect if you are not affected by ",
+
+				"exhaustion. Once used successfully, Wyrm heal cannot be used again until completing a long",
+
+				"rest. Your Wyrm Heal dice is a d6 at 10th level and a d4 at 14th level."
+
+			]),
+
+			additional : ["", "", "", "", "", "", "", "", "", "d6", "d6", "d6", "d6", "d4", "d4", "d4", "d4", "d4", "d4", "d4"]
+
+
+		},
+
+		"subclassfeature14" : {
+
+			name : "Dragon’s Breath",
+
+			source : ["HB"],
+
+			minlevel : 14,
+
+			description : desc([
+
+				"You gain a 5-6 recharge on your breath weapon at the start of each round, while in dragon form."
+
+			])
+
+		},
+
+		"subclassfeature14.1" : {
+
+			name : "Change Shape",
+
+			source : ["HB"],
+
+			minlevel : 14,
+
+			description : desc([
+
+				"You always have the spells alter self and disguise self prepared; these do not count ",
+
+				"against your list of prepared spells, and may cast these spells even when in Dragon form; ",
+
+				"however, for the spells condition you are always considered a humanoid bipedal individual ",
+
+				"of medium or smaller size."
+
+			]),
+
+			spellcastingBonus : [{
+						spells : ["alter self"],
+						selection : ["alter self"]
+					},
+
+					{
+
+						spells : ["disguise self"],
+						selection : ["disguise self"]
+
+					}]
+
+		}
+
+	}
+
+});
+
+
+
