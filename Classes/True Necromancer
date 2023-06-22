@@ -237,15 +237,19 @@ ClassList["true necromancer"] = {
 
 			description : desc([
 
-				"I can preform a ritual permanently loosing 1 point of Constitution and replacing my arm with", "an undead prosthetic, which may be in skeletal form or preserved flesh stiched into place like", "that of a Flesh Golem,",
+				"I can preform a ritual permanently loosing 1 point of Constitution and replacing my arm with", 
 
-				"The graft grants advantage on any Strength checks and adds +2 to my base armor class",
+				"an undead prosthetic, which may be in skeletal form or preserved flesh stiched into place like", 
 
-				"I can make an attack with the Undead Graft if the attack hits the target makes a Constitution", "saving throw or dies and then reanimates one round later as a zombie or skeleton under my", "control",
+				"that of a Flesh Golem. The graft grants advantage on any Strength checks and adds +2 to my base"
 
-				"The target gets the skills, saving throw proficiencies, and statistics of the zombie or skeleton", "while keeping its own, using whichever is higher",
+				"armor class. I can make an attack with the Undead Graft if the attack hits the target makes a "
 
-				"I can use this feature once per long rest"
+				"Constitution saving throw or dies and then reanimates one round later as a zombie or skeleton under"
+				
+				"my control. The target gets the skills, saving throw proficiencies, and statistics of the zombie or"
+
+				"skeleton while keeping its own, using whichever is higher. I can use this feature once per long rest"
 
 			]),
 
