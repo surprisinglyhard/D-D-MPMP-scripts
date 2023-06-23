@@ -630,9 +630,9 @@ AddSubClass("true necromancer", "stitcher", {
 
 				"I can preform my Grafting ritual on undead creatures i control",
 
-				"I can choose a monsters non legary action or ability to add to the undead, moves that need"
+				"I can choose a monsters non legary action or ability to add to the undead, moves that need",
 
-				"to recharge recharge on a long rest, or I can choose to combine two undead creatures I"
+				"to recharge recharge on a long rest, or I can choose to combine two undead creatures I",
 
 				"control to increase the hitpoint maximum of one by the hit point maximum of the other",
 
