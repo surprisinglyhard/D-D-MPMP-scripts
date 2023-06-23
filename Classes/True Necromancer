@@ -125,11 +125,15 @@ ClassList["true necromancer"] = {
 
 				"I gain a adv. to save vs. Fear caused by undead",
 
-				"If an undead targets me directly with an attack or a harmful spell that creature must make a", "Wisdom saving throw against my spell save DC",
+				"If an undead targets me directly with an attack or a harmful spell that creature must make a", 
 
-				"On a failed save the creature must choose a new target or forfeit targeting me potentially", "wasting the attack or spell",
+				"Wisdom saving throw against my spell save DC. On a failed save the creature must choose a",
 
-				"The undead becomes immune to this effect for 24 hours if it succeeds the saving throw or I", "target it with an harmful attack or spell"
+				"new target or forfeit targeting me potentially wasting the attack or spell. The undead",
+
+				"becomes immune to this effect for 24 hours if it succeeds the saving throw or I target it with",
+
+				"a harmful attack or spell"
 
 			]),
 
@@ -195,9 +199,11 @@ ClassList["true necromancer"] = {
 
 				"I gain Resistance to non-magical poison damage",
 
-				"Once per long rest if damage reduces me to 0 hit points I can make a Constitution saving", "throw with a DC of 5+ half the damage taken (rounded up)",
+				"Once per long rest if damage reduces me to 0 hit points I can make a Constitution saving", 
 
-				"On a success, I drop to 1 Hit Point instead, Radiant and Critical hit damage ignore this ability"
+				"throw with a DC of 5+ half the damage taken (rounded up). On a success, I drop to 1 Hit",
+
+				"Point instead, Radiant and Critical hit damage ignore this ability"
 
 			]),
 
@@ -271,7 +277,7 @@ ClassList["true necromancer"] = {
 
 			description : desc([
 
-				"Upon killing a creature I can take an aditional action"
+				"Upon killing a creature I can take an additional action"
 
 			])
 
@@ -370,7 +376,9 @@ ClassSubList["Calling of the pale master"] = {
 
 			description : desc([
 
-				"I can cast Animate Dead at its base level with a casting time of 1 action without expending a", "spell slot for a number of times a day equal to my Int modifier (minimum of 1)"
+				"I can cast Animate Dead at its base level with a casting time of 1 action without expending a", 
+
+				"spell slot for a number of times a day equal to my Int modifier (minimum of 1)"
 
 			]),
 
@@ -448,9 +456,9 @@ AddSubClass("true necromancer", "reaper", {
 
 			description : desc([
 
-				"As a bonus action I can mark a target for death. My attacks agaisnt marked targets gain my proficiency bonus To Hit",
+				"As a bonus action I can mark a creature for death. My attacks agaisnt marked targets gain my",
 
-				"only one target may be marked at a time"
+				"proficiency bonus To Hit. Only one target may be marked at a time"
 
 			]),
 
@@ -468,9 +476,11 @@ AddSubClass("true necromancer", "reaper", {
 
 			description : desc([
 
-				"I can attack a marked target twice, instead of once, whenever I take the Attack action on my turn"
+				"I can make two weapon attacks against a marked target when I take the Attack action"
 
-			])
+			]),
+
+			action : ["action", "Reign in Blood (two attacks)"]
 		
 		},
 
@@ -520,11 +530,9 @@ AddSubClass("true necromancer", "reaper", {
 
 			description : desc([
 
-				"When I hit a crerature with a melee attack, the creature takes extra necrotic damage equal to my",
-				
-				"Intelligence modifier",
+				"When I hit a crerature with a melee attack, the creature takes extra necrotic damage equal to",
 
-				"I heal for necrotic damage I deal with melee attacks"
+				"my Intelligence modifier. I heal for necrotic damage I deal with melee attacks"
 
 			])
 		
@@ -540,7 +548,9 @@ AddSubClass("true necromancer", "reaper", {
 
 			description : desc([
 
-				"If damage I deal reduces a creature's hit points to 35 or fewer, I deal an extra 35 necrotic damage"
+				"If damage I deal would reduce a creature's hit points to 35 or fewer, that creature takes an",
+
+				"additional 35 necrotic damage"
 
 			])
 		
@@ -558,17 +568,23 @@ AddSubClass("true necromancer", "reaper", {
 
 				"As an action I assume the form of death for 1 min once per long rest",
 
-				"The first time any enemy creature sees me in this form, the creature must succeed a wisdom saving throw or fall into a magical slumber",
+				"The first time any enemy creature sees me in this form, the creature must succeed a wisdom",
 
-				"While in this form I gain the following benifits",
+				"saving throw or fall into a magical slumber",
 
-				" • Whenever I cast a spell that has a casting time of 1 action, I can cast it using a bonus action instead",
+				"While in this form I gain the following benefits:",
+
+				" • Whenever I cast a spell that has a casting time of 1 action, I can cast it using a bonus action",
+
+				"   instead",
 
 				" • As a reaction, I can teleport within 5ft of a target marked by me that I can see",
 
 				" • I gain a flying speed equal to my walking speed and can hover",
 
-				" • I can move through creatures/objects as difficult terrain; 1d10 force damage if I end turn within"
+				" • I can move through creatures/objects as difficult terrain; I take 1d10 force damage if I end",
+
+				"   my turn within an object"
 
 			]),
 
