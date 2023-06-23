@@ -245,7 +245,7 @@ ClassList["true necromancer"] = {
 
 				"I can preform a ritual permanently loosing 1 point of Constitution and replacing my arm with", 
 
-				"an undead prosthetic, which may be in skeletal form or preserved flesh stiched into place like", 
+				"an undead prosthetic, which may be in skeletal form or preserved flesh stitched into place like", 
 
 				"that of a Flesh Golem. The graft grants advantage on any Strength checks and adds +2 to my",
 
@@ -422,7 +422,7 @@ ClassSubList["Calling of the pale master"] = {
 
 			description : desc([
 
-				"I can use my witching hour feature on a creatue huge or smaller"
+				"I can use my witching hour feature on a creature huge or smaller"
 
 			]),
 
