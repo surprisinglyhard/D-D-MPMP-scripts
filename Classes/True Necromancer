@@ -638,9 +638,9 @@ AddSubClass("true necromancer", "stitcher", {
 
 				"once a zombie goes though a ritual it is an amalgam an amalgam can only be worked on an",
 
-				"amount of times equal to my Stitcher level. Combining two amalgams also adds the number of",
-			
-				"rituals they have been through together"
+				"amount of times equal to my Stitcher level. Combining two amalgams also adds the number",
+
+				"of rituals they have been through together"
 
 			])
 		
