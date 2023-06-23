@@ -610,9 +610,9 @@ AddSubClass("true necromancer", "stitcher", {
 
 				"This ritual requires a monsters corpse and upon completion of the ritual the monster's corpse",
 
-				"is consumed. I can choose to add that monsters non legendary action to myself, moves that need",
+				"is consumed. I can choose to add that monsters non legendary action to myself, moves that",
 
-				"to recharge recharge on long rest. I can also preform this ritual to transfer a graft"
+				"need to recharge recharge on long rest. I can also preform this ritual to transfer a graft"
 
 			])
 		
@@ -630,17 +630,17 @@ AddSubClass("true necromancer", "stitcher", {
 
 				"I can preform my Grafting ritual on undead creatures i control",
 
-				"I can choose a monsters non legary action or ability to add to the undead, moves that need to",
+				"I can choose a monsters non legary action or ability to add to the undead, moves that need"
 
-				"recharge recharge on a long rest, or I can choose to combine two undead creatures I control to",
+				"to recharge recharge on a long rest, or I can choose to combine two undead creatures I"
 
-				"increase the hitpoint maximum of one by the hit point maximum of the other",
+				"control to increase the hitpoint maximum of one by the hit point maximum of the other",
 
-				"once a zombie goes though a ritual it is an amalgam",
+				"once a zombie goes though a ritual it is an amalgam an amalgam can only be worked on an",
 
-				"an amalgam can only be worked on an amount of times equal to my level",
-
-				"Combining two amalgams also adds the number of rituals they have been through"
+				"amount of times equal to my Stitcher level. Combining two amalgams also adds the number of",
+			
+				"rituals they have been through together"
 
 			])
 		
@@ -656,9 +656,11 @@ AddSubClass("true necromancer", "stitcher", {
 
 			description : desc([
 
-				"I can preform a ritual using a corpse of the same size to give an amalgam a fly, swim, or climb speed equal to its movement",
+				"I can preform a ritual using a corpse of the same size to give an amalgam a fly, swim, or climb",
 
-				"or an ability score inccrease of 1. Alternativly using a corpse of another size I can change the size class of an amalgam"
+				"speed equal to its movement or an ability score inccrease of 1. Alternativly using a corpse of",
+
+				"another size I can change the size class of an amalgam"
 
 			])
 		
@@ -692,11 +694,11 @@ AddSubClass("true necromancer", "stitcher", {
 
 			description : desc([
 
-				"One of your amalgams is a legendary amalgam it gains lengedary resistance 3/day",
+				"One of my amalgams is a legendary amalgam it gains legendary resistance 3/day",
 
-				"it can use one of its grafts with legendary timing once per round",		
+				"It gains the legendary action Use Graft one per round",		
 
-				"you may only have one legendary amalgam at a time"
+				"I can only have one legendary amalgam at a time"
 
 			])
 		
