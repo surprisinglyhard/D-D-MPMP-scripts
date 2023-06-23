@@ -597,8 +597,8 @@ AddSubClass("true necromancer", "reaper", {
 
 });
 
-//animate dead does not return a zombie with grafs to life
-//you may use the corpse to return one graf to another zombie
+//animate dead does not return a zombie with grafts to life
+//you may use the corpse to return one graft to another zombie
 
 AddSubClass("true necromancer", "stitcher", {
 
@@ -620,7 +620,7 @@ AddSubClass("true necromancer", "stitcher", {
 
 			description : desc([
 
-				"I can preform a ritual during a long rest to preform a graf onto myself",
+				"I can preform a ritual during a long rest to preform a graft onto myself",
 
 				"if the long rest is interupted the ritual is also interupted",
 
