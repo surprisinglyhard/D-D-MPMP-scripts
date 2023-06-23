@@ -644,13 +644,13 @@ AddSubClass("true necromancer", "stitcher", {
 
 			description : desc([
 
-				"I can preform my Grafting ritual on undead creatures i control",
+				"I can preform my grafting ritual on undead creatures I control",
 
-				"I can choose a monsters non legary action or ability to add to the undead, moves that need",
+				"I can choose a monsters non legendary action or ability to add to the undead, moves that",
 
-				"to recharge recharge on a long rest, or I can choose to combine two undead creatures I",
+				"need to recharge recharge on a long rest, or I can choose to combine two undead creatures",
 
-				"control to increase the hitpoint maximum of one by the hit point maximum of the other",
+				"I control to increase the hitpoint maximum of one by the hit point maximum of the other",
 
 				"once a zombie goes though a ritual it is an amalgam an amalgam can only be worked on an",
 
