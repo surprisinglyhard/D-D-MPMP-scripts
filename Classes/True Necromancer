@@ -662,13 +662,13 @@ AddSubClass("true necromancer", "stitcher", {
 		
 		},
 
-		"subclassfeature8" : {
+		"subclassfeature7" : {
 
 			name : "Details Matter",
 
 			source : ["HB",0],
 
-			minlevel : 8,
+			minlevel : 7,
 
 			description : desc([
 
@@ -682,13 +682,13 @@ AddSubClass("true necromancer", "stitcher", {
 		
 		},
 
-		"subclassfeature10" : {
+		"subclassfeature11" : {
 
 			name : "We Remain",
 
 			source : ["HB",0],
 
-			minlevel : 10,
+			minlevel : 11,
 
 			description : desc([
 
