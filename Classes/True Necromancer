@@ -422,7 +422,7 @@ ClassSubList["Calling of the pale master"] = {
 
 			description : desc([
 
-				"I can use my witching hour feature on a creature huge or smaller"
+				"I can use my witching hour feature on any creature huge or smaller"
 
 			]),
 
