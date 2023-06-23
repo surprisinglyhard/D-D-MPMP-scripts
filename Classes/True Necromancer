@@ -432,7 +432,7 @@ AddSubClass("true necromancer", "reaper", {
 
 	regExpSearch : /^(?=.*reaper).*$/i,
 
-	subname : "Calling of the reaper",
+	subname : "Calling of the Reaper",
 
 	source : ["HB",0],
 
@@ -588,7 +588,7 @@ AddSubClass("true necromancer", "stitcher", {
 
 	regExpSearch : /^(?=.*sticher).*$/i,
 
-	subname : "Calling of the sticher",
+	subname : "Calling of the Sticher",
 
 	source : ["HB",0],
 
@@ -608,11 +608,11 @@ AddSubClass("true necromancer", "stitcher", {
 
 				"if the long rest is interupted the ritual is also interupted",
 
-				"This ritual requires a monsters corpse and upon completion of the ritual the monster's corpse is consumed",
+				"This ritual requires a monsters corpse and upon completion of the ritual the monster's corpse",
 
-				"i can choose to add that monsters non legendary action to myself, moves that need to recharge recharge on long rest",
+				"is consumed. I can choose to add that monsters non legendary action to myself, moves that need",
 
-				"I can also preform this ritual to transfer a graft"
+				"to recharge recharge on long rest. I can also preform this ritual to transfer a graft"
 
 			])
 		
@@ -630,13 +630,17 @@ AddSubClass("true necromancer", "stitcher", {
 
 				"I can preform my Grafting ritual on undead creatures i control",
 
-				"I can choose a monsters non legary action or ability to add to the undead, moves that need to recharge recharge on a long rest",
+				"I can choose a monsters non legary action or ability to add to the undead, moves that need to",
 
-				"or I can choose to combine two undead creatures I control to increase the hitpoint maximum of one by the hit point maximum of the other",
+				"recharge recharge on a long rest, or I can choose to combine two undead creatures I control to",
+
+				"increase the hitpoint maximum of one by the hit point maximum of the other",
 
 				"once a zombie goes though a ritual it is an amalgam",
 
-				"an amalgam can only be grafted an amount of times equal to my level"
+				"an amalgam can only be worked on an amount of times equal to my level",
+
+				"Combining two amalgams also adds the number of rituals they have been through"
 
 			])
 		
