@@ -251,7 +251,7 @@ ClassList["true necromancer"] = {
 
 				"statistics of the zombie or skeleton while keeping its own, using whichever is higher. I can",
 
-				"use this feature once per long rest",
+				"use this feature once per long rest"
 
 			]),
 
@@ -576,6 +576,127 @@ AddSubClass("true necromancer", "reaper", {
 		
 		}
 
+
+	}
+
+});
+
+//animate dead does not return a zombie with grafs to life
+//you may use the corpse to return one graf to another zombie
+
+AddSubClass("true necromancer", "stitcher", {
+
+	regExpSearch : /^(?=.*sticher).*$/i,
+
+	subname : "Calling of the sticher",
+
+	source : ["HB",0],
+
+	features : {
+
+		"subclassfeature3" : {
+
+			name : "Executioner’s Tax",
+
+			source : ["HB",0],
+
+			minlevel : 3,
+
+			description : desc([
+
+				"I can preform a ritual during a long rest to preform a graf onto myself",
+
+				"if the long rest is interupted the ritual is also interupted",
+
+				"This ritual requires a monsters corpse and upon completion of the ritual the monster's corpse is consumed",
+
+				"i can choose to add that monsters non legendary action to myself, moves that need to recharge recharge on long rest",
+
+				"I can also preform this ritual to transfer a graft"
+
+			])
+		
+		},
+
+		"subclassfeature6" : {
+
+			name : "War Pigs",
+
+			source : ["HB",0],
+
+			minlevel : 6,
+
+			description : desc([
+
+				"I can preform my Grafting ritual on undead creatures i control",
+
+				"I can choose a monsters non legary action or ability to add to the undead, moves that need to recharge recharge on a long rest",
+
+				"or I can choose to combine two undead creatures I control to increase the hitpoint maximum of one by the hit point maximum of the other",
+
+				"once a zombie goes though a ritual it is an amalgam",
+
+				"an amalgam can only be grafted an amount of times equal to my level"
+
+			])
+		
+		},
+
+		"subclassfeature8" : {
+
+			name : "Details Matter",
+
+			source : ["HB",0],
+
+			minlevel : 8,
+
+			description : desc([
+
+				"you can preform a ritual using a corpse of the same size to give an amalgam a fly, swim, or climb speed equal to its movement",
+
+				"or an ability score by 1"
+
+			])
+		
+		},
+
+		"subclassfeature10" : {
+
+			name : "We Remain",
+
+			source : ["HB",0],
+
+			minlevel : 10,
+
+			description : desc([
+
+				"I can cast touch range spells though my amalgams",
+
+				"Amalgams within a 10ft radius of me can add my proficiency to their saving throws"
+
+			])
+		
+		},
+
+		"subclassfeature18" : {
+
+			name : "G.O.A.T.",
+
+			source : ["HB",0],
+
+			minlevel : 18,
+
+			description : desc([
+
+				"One of your amalgams is a legendary amalgam it gains lengedary resistance 3/day",
+
+				"it can use one of its grafts with legendary timing once per round",		
+
+				"you may only have one legendary amalgam at a time"
+
+			])
+		
+		},
 
 	}
 
