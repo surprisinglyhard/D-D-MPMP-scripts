@@ -652,9 +652,9 @@ AddSubClass("true necromancer", "stitcher", {
 
 			description : desc([
 
-				"you can preform a ritual using a corpse of the same size to give an amalgam a fly, swim, or climb speed equal to its movement",
+				"I can preform a ritual using a corpse of the same size to give an amalgam a fly, swim, or climb speed equal to its movement",
 
-				"or an ability score by 1"
+				"or an ability score inccrease of 1. Alternativly using a corpse of another size I can change the size class of an amalgam"
 
 			])
 		
