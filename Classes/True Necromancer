@@ -338,13 +338,13 @@ ClassSubList["Calling of the pale master"] = {
 		
 		},
 
-		"subclassfeature6.1" : {
+		"subclassfeature5.1" : {
 
 			name : "Among the Living",
 
 			source : ["HB", 0],
 
-			minlevel : 6,
+			minlevel : 5,
 
 			description : desc([
 
@@ -634,13 +634,13 @@ AddSubClass("true necromancer", "stitcher", {
 		
 		},
 
-		"subclassfeature6" : {
+		"subclassfeature5" : {
 
 			name : "War Pigs",
 
 			source : ["HB",0],
 
-			minlevel : 6,
+			minlevel : 5,
 
 			description : desc([
 
