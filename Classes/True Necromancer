@@ -723,3 +723,17 @@ AddSubClass("true necromancer", "stitcher", {
 	}
 
 });
+
+WeaponsList["scythe"] = {
+		regExpSearch : /scythe/i,
+		name : "Scythe",
+		source : ["HB",0],
+		list : "melee",
+		ability : 1,
+		type : "Martial",
+		damage : [1, 8, "slashing"],
+		range : "Melee",
+		weight : 6,
+		description : "Reach, two-handed",
+		abilitytodamage : true
+	};
