@@ -3,4 +3,28 @@
 //mabye runic armor
 //2,6,10,14
 // arcane recovery change lvl 1
+//2nd level - inscribe spells into spell book or onto person and some benefit
 //
+//6th level - Runic armor?
+//
+//10th level - enchant items?
+//
+//14th level - mass cast?
+/*	-WHAT IS THIS?-
+	This file adds optional material to "MPMB's Character Record Sheet" found at https://flapkan.com/mpmb/charsheets
+	Import this file using the "Add Extra Materials" bookmark.
+
+	-KEEP IN MIND-
+	It is recommended to enter the code in a fresh sheet before adding any other information (i.e. before making your character with it).
+*/
+
+/*	-INFORMATION-
+	Subject:	Subclass
+	Effect:		This script adds a subclass for the Wizard, called "TBA"
+	Code by:	SurprisinglyHard
+	Date:		2024-03-6 (sheet v12.999)
+	
+*/
+
+var iFileName = "Wizard - TBA.js";
+RequiredSheetVersion(12.999);
