@@ -1,8 +1,9 @@
 /*	-INFORMATION-
-  A Pilot Class for a titanfall esque adventure
+	A Pilot Class for a titanfall esque adventure
+	-UNDER CONSTRUCTION-
 */
 
-var iFileName = "Pilot Class and Additional Weapons.js";
+var iFileName = "Pilot Class and Addititives.js";
 
 RequiredSheetVersion("13.0.6");
 
