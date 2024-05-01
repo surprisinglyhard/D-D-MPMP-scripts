@@ -6,144 +6,51 @@ var iFileName = "Pilot Class and Additional Weapons.js";
 
 RequiredSheetVersion("13.0.6");
 
-ClassList["purplemancer"] = {
-/* 	ClassList object name // REQUIRED //
-	TYPE:	string
-	USE:	object name of the class as it will be used by the sheet
+ClassList["Pilot"] = {
 
-	By adding a new object to the existing ClassList object, we create a new class.
-	The object name here is 'purplemancer'. You can use any object name as long as it is not already in use.
-	If you do use an object name that is already in use, you will be overwriting that object.
-	Note the use of only lower case! Also note the absence of the word "var" and the use of brackets [].
-*/
-	name : "Purplemancer",
-/*	name // REQUIRED //
-	TYPE:	string
-	USE:	name of the class as it will be used by the sheet
-*/
-	regExpSearch : /^(?=.*purple)(?=.*mancer).*$/i,
-/*	regExpSearch // REQUIRED //
-	TYPE:	regular expression
-	USE:	used to match the text in the class field to see if this class is present
+	name : "Pilot",
 
-	This has to be a match for the name given earlier, or the class will never by recognized.
-	Now it looks for any entry that has both the words "purple" and "mancer" in it,
-	 disregarding capitalization or word order.
-	If this looks too complicated, or you want to match only a single word, just write:
-		regExpSearch : /purplemancer/i,
-*/
-	source : ["SRD", 30],
-/*	source // REQUIRED //
-	TYPE:	array with two entries (or array of these arrays)
-	USE:	define where the class is found
+	regExpSearch : /^(?=.*pilot).*$/i,
 
-	This attribute is used by the sheet to determine if the class should be available depending on the sources included and excluded.
+	source : ["HB", 0],
 
-	This array has two entries, a string followed by a number
-	1. string
-		The first entry has to be the object name of a SourceList object.
-	2. number
-		The second entry is the page number to find the class at.
-		This can be any number and is ignored if it is a 0.
-
-	See the "source (SourceList).js" file for learning how to add a custom source.
-
-	Alternatively, this can be an array of arrays to indicate it appears in multiple sources.
-	For example, if something appears on both page 7 of the Elemental Evil Player's Companion
-	 and on page 115 of the Sword Coast Adventure Guide, use the following:
-		source : [["E", 7], ["S", 115]],
-
-	If a class is completely homebrew, or you don't want to make a custom source, just put the following:
-		source : ["HB", 0],
-	"HB" refers to the'homebrew' source.
-*/
 	defaultExcluded : true,
-/*	defaultExcluded // OPTIONAL //
-	TYPE:	boolean
-	USE:	whether this class should be excluded by default (true) or included by default (false)
 
-	Include this attribute and set it to true if the class should appear in the Excluded list of the
-	Source Selection Dialog when the script is added for the first time.
-	It will have to be manually set to be included before it is used by the sheet's automation.
-	The user will be made aware of this exclusion.
+	primaryAbility : "Dexterity or Intelligence",
 
-	Note that if a class is excluded, none of its subclasses will be accessible either.
+	prereqs : "Dexterity 13 or Intelligence 13",
 
-	This is useful for optional classes that you wouldn't normally want to use (e.g. playtest or campaign-specific).
+	die : 8,
 
-	Setting this attribute to false is the same as not including this attribute.
-*/
-	primaryAbility : "Strength or Dexterity",
-/*	primaryAbility // REQUIRED //
-	TYPE:	string
-	USE:	abilities that are essential to the class to be displayed in the Ability Scores dialog
+	improvements : [0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10],
 
-	If there are no essential abilities, just put an empty string:
-		primaryAbility : "",
-*/
-	prereqs : "Strength 13 or Dexterity 13",
-/*	prereqs // REQUIRED //
-	TYPE:	string
-	USE:	prerequisite abilities to multiclass in the class, to be displayed in the Ability Scores dialog when multiclassing
+	saves : ["Dex", "Int"],
 
-	If there are no prerequisite abilities, just put an empty string:
-		prereqs : "",
-*/
-	die : 10,
-/*	die // REQUIRED //
-	TYPE:	number
-	USE:	number of the type of hit die the class has (i.e. 10 means d10)
+	skills : ["\n\n" + toUni("Pilot") + ": Choose two from Acrobatics, Animal Handling, Athletics, History, Insight, Intimidation, Perception, and Survival.", "\n\n" + toUni("Pilot") + ": Choose one from Athletics, Intimidation, Perception, and Survival."], 
 
-	You can't have multiple HD for a class (2d6 per level is not possible).
-*/
-	improvements : [0, 0, 0, 1, 1, 2, 2, 3, 3, 3, 3, 4, 4, 5, 5, 6, 6, 6, 7, 7],
-/*	improvements // REQUIRED //
-	Array of the amount of ability score improvements the class has at each level.
-	Normally this is an array of 20 entries, one for each level, but you can have more or less.
-	Note that this is not cumulative, the number is the amount of ASI at that level.
-	This example uses the Fighter's progression.
-	If the class doesn't get any improvements, just put the following:
-		improvements : [0],
-*/
-	saves : ["Str", "Con"],
-/*	improvements // OPTIONAL //
-	Array of the saving throw proficiencies the class gets, using the name of an ability.
-	You have to include at least the first three-letters of an ability, and capitalization doesn't matter.
-	Thus, an array entry can be "Str", "Dex", "Con", "Int", "Wis, or "Cha".
-*/
-
-// EVERYTHING BELOW THIS LINE IS NOT UPDATED TO v13 YET!
-
-	skills : ["\n\n" + toUni("MyClass") + ": Choose two from Acrobatics, Animal Handling, Athletics, History, Insight, Intimidation, Perception, and Survival.", "\n\n" + toUni("MyClass") + ": Choose one from Athletics, Intimidation, Perception, and Survival."], //required; the text to display for skill proficiencies. Note the \n\n at the start, they are important! The first entry is for when the class is the primary class, the second entry is for when the class is taken later as part of a multiclass
-
-/* SYNTAX CHANGE v12.998 >> old syntax for 'tools' and 'languages' are no longer supported!! */
 	toolProfs : { // optional; this is an object with arrays with the tool proficiencies gained. Each entry in an array can be its own array of 2 entries. The first entry is the name of the tool and the second entry is either 1) a number if the tool is yet to be chosen, or 2) the 3-letter ability score abbreviation if the tool is to be listed in the skill section and have a bonus calculated
 		primary : [["Musical instrument", 3], ["Thieves' tools", "Dex"]], // optional; the tool proficiencies gained if the class is the primary class (i.e. taken at 1st level)
 		secondary : [["Musical instrument", 1]] // optional; the tool proficiencies gained if the class is not the primary class (i.e. taken at a later level)
 	},
 
 	armor : [ //required; the 4 entries are for: ["light", "medium", "heavy", "shields"]
-		[true, true, true, true], //required; the armor proficiencies if this is the first or only class
-		[true, true, false, true] //required; the armor proficiencies if this class is multiclassed with (so not taken at level 1, but later)
+		[true, false, false, true], //required; the armor proficiencies if this is the first or only class
+		[true, false, false, true] //required; the armor proficiencies if this class is multiclassed with (so not taken at level 1, but later)
 	],
 
 	weapons : [ //required; the 3 entries are for: ["simple", "martial", "other"]
-		[true, false, ["hand crossbow", "longsword", "rapier", "shortsword"]], //required; the weapon proficiencies if this is the first or only class
-		[true, false, ["hand crossbow"]] //required; the weapon proficiencies if this class is multiclassed with (so not taken at level 1, but later)
+		[true, false, ["Smart Pistol MK6"]],
+		[true, false, ["Smart Pistol MK6"]]
 	],
 
 	equipment : "MyClass starting equipment:\n \u2022 Chain mail -or- leather armor, a longbow, and 20 arrows;\n \u2022 A martial weapon and a shield -or- two martial weapons;\n \u2022 A light crossbow and 20 bolts -or- two handaxes;\n \u2022 A dungeoneer's pack -or- an explorer's pack.\n\nAlternatively, choose 5d4 \xD7 10 gp worth of starting equipment instead of both the class' and the background's starting equipment.", //required; the text to display when citing the starting equipment
 
-	subclasses : ["Martial Archetype", ["champion", "battle master", "eldritch knight", "purple dragon knight"]], //required; the names of the subclasses. The first entry is the overall name that is given to the subclasses, the second entry is a list of the subclass, using the exact names of the entry of the subclasses in the ClassSubList. //Note that if one of the entries in the array of subclasses doesn't exist in the ClassSubList, the sheet will throw an error as soon as you make a character with levels in this class
+	subclasses : ["", ["Rifleman", "CQB", "Assassin", "Heavy Pilots", "Grapple", "Holo Pilot", "Spectre Camo", "Pulse Blade", "Shinobi"]], //required; the names of the subclasses. The first entry is the overall name that is given to the subclasses, the second entry is a list of the subclass, using the exact names of the entry of the subclasses in the ClassSubList. //Note that if one of the entries in the array of subclasses doesn't exist in the ClassSubList, the sheet will throw an error as soon as you make a character with levels in this class
 	//IMPORTANT: for any subclass you add using the AddSubClass() function, don't list them here! The AddSubClass() function makes its own entry in this array! If you have entries here that don't exist (because you didn't add any ClassSubList entry, or added it using the AddSubClass() function, then the sheet will throw strange errors)!
-
-	prestigeClassPrereq : 5, //optional; if you include this attribute, the sheet will consider the class a prestige class // You can make this attribute a number, which represents the levels the character must have before being able to gain the prestige class. Alternatively, you can make this attribute a string, which can be evaluated with eval() and returns either true (prereqs met) or false (prereqs not met).
 
 	attacks : [1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3], //required; the amount of attacks at each level. Note that there are 20 entries, one for each level.
 
 	abilitySave : 4, //optional, but required for a spellcaster; the ability score to use for the Ability Saving Throws. Remove this line if your class has no Ability that requires Saving Throws. (Str=1, Dex=2, Con=3, Int=4, Wis=5, Cha=6)
-
-	abilitySaveAlt : 2,//optional; if the class offers a choice between two ability scores to be used to determine the DC, you can put that secondary one here (Str=1, Dex=2, Con=3, Int=4, Wis=5, Cha=6)
 
 	spellcastingFactor : 3, //required for a spellcaster; the speed with which spell progression works type 1 for full spellcasting (Cleric), 2 for half spellcasting (Paladin), and 3 for one-third spellcasting (Arcane Trickster). This can be any positive number other than 0. Remove this line if your class has no spellcasting. If your character uses the Warlock way of spellcasting, write "warlock1" here. The 1 indicates the spell progression factor. You can change it to a 2 or 3 to have half or one-third spell progression (or to any other factor you like).
 		// You can also have this refer to a Spell Slot progression you define yourself, as a separate variable (see "Homebrew Syntax - SpellTable.js"). In order to do this the name of that variable and the spellcastingFactor must match. Using the name "purplemancer" for example would mean that here you put [spellcastingFactor : "purplemancer1"] (the 1 is the factor, this can be any positive number other than 0) while for the variable containing the table you use "purplemancerSpellTable". Note that the name is all lower case!
