@@ -75,21 +75,21 @@ ClassList["Pilot"] = {
 
 	features : { //required;  the class features. Each works the same way, so only a couple of example are given. You can add as many as you want
 
-		"fighting style" : { //note the use of lower case characters
-			name : "Fighting Style", //required; the name of the class feature
-			source : ["P", 72], //required; the source of the class feature
-			minlevel : 1, //required; the level at which the feature is gained
-			description : "\n   " + "Choose a Fighting Style using the \"Choose Feature\" button above", //required; the text to put in the "Class Features" field
-			choices : ["Great Weapon Fighting", "Protection", "Two-Weapon Fighting"], //optional; choices the feature offers, if any.
-			choicesNotInMenu : true, //optional: this tells the sheet not to put the choices into the "Choose Options" menu on the second page. Use this is you want to have the choices selected through another class feature. See for an example of this the "Draconic Bloodline" sorcerer archetype. // Note that you always want to have the choices listed in the choices attribute, because otherwise they won't be updated if they have level-dependent features
-			"great weapon fighting" : { //required if "choices" is defined; has to be exactly the same as how it is written in the "choices" entry. Note the use of lower case!
-				name : "Great Weapon Fighting Style", //required;
-				description : "\n   " + "Reroll 1 or 2 on damage if wielding two-handed/versatile melee weapon in both hands" //required;
+		"pilot style" : { //note the use of lower case characters
+			name : "Pilot Style",
+			source : ["HB", 0],
+			minlevel : 1,
+			description : "\n   " + "Choose a Pilot Style using the \"Choose Feature\" button above",
+			choices : ["ACE", "BONDED", "BRAWLER", "BRUTAL", "CRACK SHOT", "CENTIMANE", "COMBINED ARMS", "DUELIST", "DRONE COMMANDER", "ENGINEER", "EXECUTIONER", "EXEMPLAR", "GUNSLINGER", "GREASE MONKEY", "HACKER", "HEAVY GUNNER", "HUNTER", "INFILTRATOR", "JUGGERNAUT", "LEADER", "NUCLEAR CAVALIER", "SIEGE SPECIALIST", "SKIRMISHER", "SPOTTER", "STORMBRINGER", "TACTICIAN", "TECHNOPHILE", "VANGUARD", "WALKING ARMORY"],
+		
+			"ACE" : { //required if "choices" is defined; has to be exactly the same as how it is written in the "choices" entry. Note the use of lower case!
+				name : "ACE Pilot Sytle", //required;
+				description : "\n   " + "Whenever an attack misses me, I may use my reaction to fly up to my movement in any direction." //required;
 			},
 
-			"protection" : { //has to be exactly the same as how it is written in the "choices" entry. Note the use of lower case!
-				name : "Protection Fighting Style",
-				description : "\n   " + "As a reaction, I can give disadv. on an attack made vs. someone within 5 ft of me" + "\n   " + "I need to be wielding a shield and be able to see the attacker to do this",
+			"BONDED" : { //has to be exactly the same as how it is written in the "choices" entry. Note the use of lower case!
+				name : "BONDED Pilot Style",
+				description : "\n   " + "As a reaction, I can give disadv. on an attack made vs. an ally within my line of sight" + "\n   " + "Both the Attacker and my Ally need to be in line of sight to do this",
 				action : ["reaction", ""] //optional; adds the name of this choice to the reaction list when chosen. The options are "action", "bonus action", and "reaction" //the second value in the array is added as a suffix for the "name" of the feature when entered into the action field
 			},
 
