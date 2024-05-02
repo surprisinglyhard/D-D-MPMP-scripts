@@ -29,7 +29,7 @@ ClassList["Pilot"] = {
 
 	skills : ["\n\n" + toUni("Pilot") + ": Choose two from Acrobatics, Animal Handling, Athletics, History, Insight, Intimidation, Perception, and Survival.", "\n\n" + toUni("Pilot") + ": Choose one from Athletics, Intimidation, Perception, and Survival."], 
 
-	toolProfs : { // optional; this is an object with arrays with the tool proficiencies gained. Each entry in an array can be its own array of 2 entries. The first entry is the name of the tool and the second entry is either 1) a number if the tool is yet to be chosen, or 2) the 3-letter ability score abbreviation if the tool is to be listed in the skill section and have a bonus calculated
+	toolProfs : { 
 		primary : [["Musical instrument", 3], ["Thieves' tools", "Dex"]], // optional; the tool proficiencies gained if the class is the primary class (i.e. taken at 1st level)
 		secondary : [["Musical instrument", 1]] // optional; the tool proficiencies gained if the class is not the primary class (i.e. taken at a later level)
 	},
@@ -45,8 +45,9 @@ ClassList["Pilot"] = {
 	],
 
 	equipment : "MyClass starting equipment:\n \u2022 Chain mail -or- leather armor, a longbow, and 20 arrows;\n \u2022 A martial weapon and a shield -or- two martial weapons;\n \u2022 A light crossbow and 20 bolts -or- two handaxes;\n \u2022 A dungeoneer's pack -or- an explorer's pack.\n\nAlternatively, choose 5d4 \xD7 10 gp worth of starting equipment instead of both the class' and the background's starting equipment.", //required; the text to display when citing the starting equipment
-
-	subclasses : ["", ["Rifleman", "CQB", "Assassin", "Heavy Pilots", "Grapple", "Holo Pilot", "Spectre Camo", "Pulse Blade", "Shinobi"]], //required; the names of the subclasses. The first entry is the overall name that is given to the subclasses, the second entry is a list of the subclass, using the exact names of the entry of the subclasses in the ClassSubList. //Note that if one of the entries in the array of subclasses doesn't exist in the ClassSubList, the sheet will throw an error as soon as you make a character with levels in this class
+	subclasses : ["", ["Rifleman"]], //required; the names of the subclasses. The first entry is the overall name that is given to the subclasses, the second entry is a list of the subclass, using the exact names of the entry of the subclasses in the ClassSubList. //Note that if one of the entries in the array of subclasses doesn't exist in the ClassSubList, the sheet will throw an error as soon as you make a character with levels in this class
+	
+	//subclasses : ["", ["Rifleman", "CQB", "Assassin", "Heavy Pilots", "Grapple", "Holo Pilot", "Spectre Camo", "Pulse Blade", "Shinobi"]], //required; the names of the subclasses. The first entry is the overall name that is given to the subclasses, the second entry is a list of the subclass, using the exact names of the entry of the subclasses in the ClassSubList. //Note that if one of the entries in the array of subclasses doesn't exist in the ClassSubList, the sheet will throw an error as soon as you make a character with levels in this class
 	//IMPORTANT: for any subclass you add using the AddSubClass() function, don't list them here! The AddSubClass() function makes its own entry in this array! If you have entries here that don't exist (because you didn't add any ClassSubList entry, or added it using the AddSubClass() function, then the sheet will throw strange errors)!
 
 	attacks : [1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3], //required; the amount of attacks at each level. Note that there are 20 entries, one for each level.
@@ -80,8 +81,12 @@ ClassList["Pilot"] = {
 			source : ["HB", 0],
 			minlevel : 1,
 			description : "\n   " + "Choose a Pilot Style using the \"Choose Feature\" button above",
-			choices : ["ACE", "BONDED", "BRAWLER", "BRUTAL", "CRACK SHOT", "CENTIMANE", "COMBINED ARMS", "DUELIST", "DRONE COMMANDER", "ENGINEER", "EXECUTIONER", "EXEMPLAR", "GUNSLINGER", "GREASE MONKEY", "HACKER", "HEAVY GUNNER", "HUNTER", "INFILTRATOR", "JUGGERNAUT", "LEADER", "NUCLEAR CAVALIER", "SIEGE SPECIALIST", "SKIRMISHER", "SPOTTER", "STORMBRINGER", "TACTICIAN", "TECHNOPHILE", "VANGUARD", "WALKING ARMORY"],
-		
+			choices : ["ACE", "BONDED", "BRAWLER"],
+
+
+			//choices : ["ACE", "BONDED", "BRAWLER", "BRUTAL", "CRACK SHOT", "CENTIMANE", "COMBINED ARMS", "DUELIST", "DRONE COMMANDER", "ENGINEER", "EXECUTIONER", "EXEMPLAR", "GUNSLINGER", "GREASE MONKEY", "HACKER", "HEAVY GUNNER", "HUNTER", "INFILTRATOR", "JUGGERNAUT", "LEADER", "NUCLEAR CAVALIER", "SIEGE SPECIALIST", "SKIRMISHER", "SPOTTER", "STORMBRINGER", "TACTICIAN", "TECHNOPHILE", "VANGUARD", "WALKING ARMORY"],
+
+
 			"ACE" : { //required if "choices" is defined; has to be exactly the same as how it is written in the "choices" entry. Note the use of lower case!
 				name : "ACE Pilot Sytle", //required;
 				description : "\n   " + "Whenever an attack misses me, I may use my reaction to fly up to my movement in any direction." //required;
@@ -93,8 +98,8 @@ ClassList["Pilot"] = {
 				action : ["reaction", ""] //optional; adds the name of this choice to the reaction list when chosen. The options are "action", "bonus action", and "reaction" //the second value in the array is added as a suffix for the "name" of the feature when entered into the action field
 			},
 
-			"two-weapon fighting" : { //has to be exactly the same as how it is written in the "choices" entry. Note the use of lower case!
-				name : "Two-Weapon Fighting Style",
+			"BRAWLER" : { //has to be exactly the same as how it is written in the "choices" entry. Note the use of lower case!
+				name : "BRAWLER Pilot Style",
 				description : "\n   " + "I can add my ability modifier to the damage of my off-hand attacks",
 
 				calcChanges : { //optional; adds stuff to the calculation of attacks and/or HP
@@ -176,8 +181,7 @@ ClassList["Pilot"] = {
 			name : "Spellcasting",
 			source : ["P", 114],
 			minlevel : 1,
-			description : "\n   " + "I can cast prepared wizard cantrips/spells, using Intelligence as my spellcasting ability" + "\n   " + "I can use an arcane focus as a spellcasting focus" + "\n   " + "I can cast all wizard spells in my spellbook as rituals if they have the ritual tag",
-			additional : ["3 cantrips known", "3 cantrips known", "3 cantrips known", "4 cantrips known", "4 cantrips known", "4 cantrips known", "4 cantrips known", "4 cantrips known", "4 cantrips known", "5 cantrips known", "5 cantrips known", "5 cantrips known", "5 cantrips known", "5 cantrips known", "5 cantrips known", "5 cantrips known", "5 cantrips known", "5 cantrips known", "5 cantrips known", "5 cantrips known"], //optional; text to display in the header of the feature. This can be one value, but can also be an array of 20 values, one for each level.
+			description : "\n   " + "I can use Tech poers, using Intelligence as my spellcasting ability" + "\n   " + "I can use a datapad as a spellcasting focus" + "\n   " + "I can use all tech abilities in my datapad as rituals if they have the ritual tag",
 		},
 
 		"second wind" : {
@@ -218,50 +222,8 @@ ClassList["Pilot"] = {
 		"subclassfeature3.1" : {
 			name : "", //any feature who's name is empty like this one is, will be ignored. Since v12.5 of the sheet, an entry like this serves no function
 			minlevel : 3,
-		},
+		}
 
-		"natural antivenom" : {
-			name : "Natural Antivenom",
-			source : ["UA:MC", 7],
-			minlevel : 9,
-			description : desc([
-				"I have advantage on saves vs. poison and resistance to poison damage",
-				"When I use a poultice, in addition to healing, I cure one poison effect on the creature",
-				"I gain proficiency with Constitution saving throws"
-			]),
-
-			savetxt : { // Optional; this attribute defines entries to add to the field for "Saving Throw Advantages / Disadvantages"
-
-				text : ["Dex save vs. area effects: fail \u2015 half dmg, success \u2015 no dmg", "Magic can't put me to sleep"], // Optional; this is an array of strings, and each of those strings is added to the field exactly as presented here
-
-				immune : ["poison", "disease"], // Optional; this is an array of strings that the character is immune to. This is put in the field after the text "Immune to ", so in this example it would result in "Immune to poison and disease"
-
-				adv_vs : ["traps", "charmed"] // Optional; this is an array of things that the character has advantage on saves against. This is put in the field after the text "Adv. on saves vs. ", so in this example it would result in "Adv. on saves vs. traps and charmed"
-			},
-
-			dmgres : ["Poison"], //optional; an array of damage types that the class gets resistance against. // If the resistance has a condition attached to it, like only being against nonmagical attacks, substitute the entry in the array with an array of 2: [the damage type, the damage type with the condition]. // For example: [["Bludgeoning", "Bludg. (nonmagical)"], ["Piercing", "Pierc. (nonmagical)"], ["Slashing", "Slash. (nonmagical)"]]
-
-			saves : ["Con"], //optional; an array of the ability scores with which the class feature grants proficiency in saving throws
-
-			toolProfs : [["Musical instrument", 3], ["Thieves' tools", "Dex"]], // optional; this is an array with the tool proficiencies gained. Each entry can be its own array of 2 entries. The first entry is the name of the tool and the second entry is either 1) a number if the tool is yet to be chosen, or 2) the 3-letter ability score abbreviation if the tool is to be listed in the skill section and have a bonus calculated
-
-			languageProfs : [1, "Elvish"], // optional; this is an array of the language proficiencies gained. An entry can either be 1) a string that represents the language learned or 2) a number which is the number of language gained that can be chosen by the player
-
-			speed : { //required; This sets a value for one or more speed modes, and/or a value to be added to a specific speed mode or to all speed modes // the attributes of this object can be "walk", "burrow", "climb", "fly", "swim", and "allModes"
-
-				// all of the following attributes are optional and you can add more ("burrow" isn't part of this example!)
-
-				walk : { spd : 30, enc : 20 }, // the objects "walk", "burrow", "climb", "fly", "swim" are all the same, they are an object with two attributes, 'spd' for the speed in feet, and 'enc' for the encumbered speed in feet.
-
-				climb : { spd : "+50", enc : 0 }, // instead of numbers, you can also have modifiers. Modifiers are a string, starting with a mathematical operator, followed by a number (e.g. "-10", "+20"). // a value that is zero is ignored
-
-				fly : { spd : "walk", enc : 0 }, // instead of a number/modifier, you can also set the attribute to "walk". This makes the speed mode assume the walking speed // Using an underscore as the first character means the value is only added if the value would be non-zero
-
-				swim : { spd : "fixed 60", enc : "fixed 60" }, // if you include the word "fixed" together with a number, the movement mode will be that number, without any modifiers from other sources (like the Monk's speed bonus). However, if another entry that isn't 'fixed' does end up with a higher total while including any modifiers, that speed is used instead
-
-				allModes : "+10" // the 'allModes' attribute can only consist of a modifier. This modifier is applied to all speed modes, both normal and encumbered. It is only applied if the speed mode exists, it won't give the character a burrow speed if it would otherwise have none, for example
-			},
-		},
 	}
 }
 
@@ -379,5 +341,5 @@ SpellsList["Absorb Energy"] = {
 	description : "Acid, Cold, Energy, Fire, Ion, Kinetic, Lightning, or Sonic resistance till next turn start; first melee hit +1d6+1d6/SL dmg",
 	descriptionFull : ""The power captures some of the incoming energy, lessening its effect on you and storing it for your next melee attack. You have resistance to the triggering damage type until the start of your next turn. Also, the first time you hit with a melee attack on your next turn, the target takes an extra 1d6 damage of the triggering type, and the power ends. When you cast this power using a power slot of 2nd level or higher, the extra damage increases by 1d6 for each slot level above 1st."
 
-	},
-}
+	}
+
