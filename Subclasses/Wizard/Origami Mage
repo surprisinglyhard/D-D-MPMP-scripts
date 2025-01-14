@@ -1,9 +1,4 @@
-/*
-
-    Draft_1
-
-*/
-
+//Draft_02
 
 var iFileName = "Wizard - Origami Mage.js";
 
@@ -179,14 +174,14 @@ limfeaname : "Arcane Arts",
 			description : desc([
 
 				"I learn the Unseen Servant spell; I always have it prepared, and it doesn’t count against the number of spells I can prepare each day. In 0addition, I can cast it without expending a spell slot, but the maximum number of servants I can have at a time is equal to half my wizard level (rounded up). When I cast it, it has the following changes:",
-"The spell lasts for a number of hours equal to my proficiency bonus, instead of 1 hour.",
-"Your servant appears as a visible origami version of itself.",
-"Your servant is immune to poison and psychic damage.",
-"Your servant can move through a space as narrow as 1 inch wide without squeezing.",
-"When I use my bonus action to command a servant, I can issue a unique command to each servant I have created as part of the same bonus action.",
-"Your servant falls at a rate of 60 feet per round and takes no falling damage.",
-"Your servant can see invisible creatures and objects as if they were visible.",
-"As an action, while my servant is within 100 feet of you, I can see through my servant’s eyes and hear what it hears until the start of my next turn, gaining the benefits of any special senses that the servant has. During this time, I are deaf and blind with regard to my own senses."
+				"The spell lasts for a number of hours equal to my proficiency bonus, instead of 1 hour.",
+				"Your servant appears as a visible origami version of itself.",
+				"Your servant is immune to poison and psychic damage.",
+				"Your servant can move through a space as narrow as 1 inch wide without squeezing.",
+				"When I use my bonus action to command a servant, I can issue a unique command to each servant I have created as part of the same bonus action.",
+				"Your servant falls at a rate of 60 feet per round and takes no falling damage.",
+				"Your servant can see invisible creatures and objects as if they were visible.",
+				"As an action, while my servant is within 100 feet of you, I can see through my servant’s eyes and hear what it hears until the start of my next turn, gaining the benefits of any special senses that the servant has. During this time, I are deaf and blind with regard to my own senses."
 
 			])
 
