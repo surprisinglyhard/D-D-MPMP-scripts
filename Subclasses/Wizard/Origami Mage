@@ -26,7 +26,7 @@ AddSubClass("wizard", "origami mage", {
 	regExpSearch : /^(?=.*origami)(?=.*(wizard|mage)).*$/i,
 	subname : "Origami Mage",
 	source : [["OTTG", 152]],
-	fullname : "Origami MAge",
+	fullname : "Origami Mage",
 	features : {
 
 		"subclassfeature2" : {
@@ -39,11 +39,19 @@ AddSubClass("wizard", "origami mage", {
 
 			description : desc([
 
-				"I learn to weave magic into origami, allowing me to create magnificent moving art pieces, which act on my behalf. As a bonus action, I can fold and imbue life into a paper construct that takes a form I choose. See the \"Notes\" page for the list. When crafted, an origami construct becomes bound to me or another creature of my choice that I can see within 60 feet of me.",
-
-        "A creature with a bound origami construct gains the unique effects and features listed for that construct. A creature can’t have more than one of the same origami construct bound to it at a time, unless stated otherwise. A bound construct occupies the same space as the creature it’s bound to.",
-
-        "These constructs stay imbued with life for a number of hours equal to half my wizard level. Origami constructs have an AC equal to my spell save DC, are immune to poison and psychic damage, and are destroyed when they take any damage. I can use this feature to create an origami construct a number of times equal to my proficiency bonus, and I regain all expended uses when I finish a long rest."
+				"I learn to weave magic into origami, allowing me to create magnificent moving art pieces,", 
+				"which act on my behalf. As a bonus action, I can fold and imbue life into a paper construct", 
+				"that takes a form I choose.(see third page) When crafted, an origami construct becomes", 
+				"bound to me or another creature of my choice that I can see within 60 feet of me.",
+				"A creature with a bound origami construct gains the unique effects and features listed for", 
+				"that construct. A creature can’t have more than one of the same origami construct bound to", 
+				"it at a time, unless stated otherwise. A bound construct occupies the same space as the", 
+				"creature it’s bound to.",
+				"These constructs stay imbued with life for a number of hours equal to half my wizard level.", 
+				"Origami constructs have an AC equal to my spell save DC, are immune to poison and psychic", 
+				"damage, and are destroyed when they take any damage. I can use this feature to create an", 
+				"origami construct a number of times equal to my proficiency bonus, and I regain all expended", 
+				"uses when I finish a long rest."
 
 			]),
 
@@ -60,44 +68,44 @@ limfeaname : "Arcane Arts",
 					name : "Bird",
 					extraname : "Arcane Arts",
 					source : [["OTTG", 152]],
-					description : desc("While the origami bird is bound to my person, I gain proficiency in the Perception skill. Additionally, I deal an additional 2 slashing damage whenever I hit a target with a ranged attack.")
+					description : desc("While the origami bird is bound to my person, I gain proficiency in the Perception skill. Additionally, I deal an additional 2 slashing damage whenever I hit a target with a ranged attack."
+						)
 				},
 				"cat" : {
 					name : "Cat",
 					extraname : "Arcane Arts",
 					source : [["OTTG", 152]],
-          additional : ["", "d6", "d6", "d6", "d8", "d8", "d8", "d8", "d8", "d8", "d10", "d10", "d10", "d10", "d10", "d10", "d12", "d12", "d12", "d12"],
-					description : desc("While the origami cat is bound to your person, you gain proficiency in the Stealth skill. Additionally, once on each of your turns when you hit a target with a melee weapon attack, the origami cat can make a melee spell attack against the same target. Its attack modifier is equal to your weapon attack modifier, and on a hit, the target takes 1d6 slashing damage.",
-"The origami cat’s damage increases when you reach certain levels in this class: 1d8 at 5th level, 1d10 at 11th level, and 1d12 at 17th level."
-)
+          additional : ["", "1d6", "1d6", "1d6", "1d8", "1d8", "1d8", "1d8", "1d8", "1d8", "1d10", "1d10", "1d10", "1d10", "1d10", "1d10", "1d12", "1d12", "1d12", "1d12"],
+					description : desc("While the origami cat is bound to my person, I gain proficiency in the Stealth skill. Additionally, once on each of my turns when I hit a target with a melee weapon attack, the origami cat can make a melee spell attack against the same target. Its attack modifier is equal to my weapon attack modifier, and on a hit, the target takes 1d6 slashing damage. The origami cat’s damage increases when I reach certain levels in this class: 1d8 at 5th level, 1d10 at 11th level, and 1d12 at 17th level."
+								)
 				},
 				"crab" : {
 					name : "Crab",
 					extraname : "Arcane Arts",
 					source : [["OTTG", 152]],
-					description : desc("While the origami crab is bound to your person, you gain a +1 bonus to your AC and proficiency in the Athletics skill. If the wizard that crafted this origami crab creates another, this origami crab is destroyed.")
+					description : desc("While the origami crab is bound to my person, I gain a +1 bonus to my AC and proficiency in the Athletics skill. If the wizard that crafted this origami crab creates another, this origami crab is destroyed.")
 				},
 			"dragon" : {
 					name : "Dragon",
 					extraname : "Arcane Arts",
 					source : [["OTTG", 152]],
-					description : desc("While the origami dragon is bound to your person, you have disadvantage on Dexterity (Stealth) checks and can’t benefit from being invisible. Additionally, you take 1d4 fire damage at the start of each of your turns. You can have multiple origami dragons bound to you at the same time.",
-"When the construct is destroyed, it quickly pops in an audible explosion, dealing 2d6 fire damage to each creature within 5 feet of it.")
+					description : desc("While the origami dragon is bound to my person, I have disadvantage on Dexterity (Stealth) checks and can’t benefit from being invisible. Additionally, I take 1d4 fire damage at the start of each of my turns. I can have multiple origami dragons bound to I at the same time. When the construct is destroyed, it quickly pops in an audible explosion, dealing 2d6 fire damage to each creature within 5 feet of it."
+								)
 				},
       "frog" : {
 					name : "Frog",
 					extraname : "Arcane Arts",
 					source : [["OTTG", 152]],
-					description : desc("While the origami frog is bound to your person, you gain proficiency in the Acrobatics skill. As a reaction, when you would fail a Dexterity saving throw, you can add a bonus to the roll equal to the spellcasting ability modifier of the wizard that crafted the construct; using this feature destroys the origami frog.")
+					description : desc("While the origami frog is bound to my person, I gain proficiency in the Acrobatics skill. As a reaction, when I would fail a Dexterity saving throw, I can add a bonus to the roll equal to the spellcasting ability modifier of the wizard that crafted the construct; using this feature destroys the origami frog.")
 				},
 				autoSelectExtrachoices : [{
 					extrachoice : "bird"
 				}, {
 					extrachoice : "cat"
 				}, {
-          extrachoice : "crab"
+          				extrachoice : "crab"
 				}, {
-          extrachoice : "dragon"
+          				extrachoice : "dragon"
 				}, {
 					extrachoice : "frog"
 				}]
@@ -136,7 +144,7 @@ limfeaname : "Arcane Arts",
 
 			description : desc([ 
 
-				"you can use a bonus action to move one of your origami constructs to a creature that you can see within 30 feet of it."
+				"you can use a bonus action to move one of my origami constructs to a creature that I can see within 30 feet of it."
 
 			]),
 
@@ -154,7 +162,7 @@ limfeaname : "Arcane Arts",
 
 			description : desc([ 
 
-				"when you cast a spell with a range of touch, your origami construct can deliver the spell as if it had cast the spell. Your construct must be within 100 feet of you. If the spell requires an attack roll, you use your attack modifier for the roll."
+				"when I cast a spell with a range of touch, my origami construct can deliver the spell as if it had cast the spell. my construct must be within 100 feet of you. If the spell requires an attack roll, I use my attack modifier for the roll."
 
 			])
 
@@ -170,7 +178,15 @@ limfeaname : "Arcane Arts",
 
 			description : desc([
 
-				"I learn the Unseen Servant spell; you always have it prepared, and it doesn’t count against the number of spells you can prepare each day. In 0addition, you can cast it without expending a spell slot, but the maximum number of servants you can have at a time is equal to half your wizard level (rounded up). When you cast it, it has the following changes:"
+				"I learn the Unseen Servant spell; I always have it prepared, and it doesn’t count against the number of spells I can prepare each day. In 0addition, I can cast it without expending a spell slot, but the maximum number of servants I can have at a time is equal to half my wizard level (rounded up). When I cast it, it has the following changes:",
+"The spell lasts for a number of hours equal to my proficiency bonus, instead of 1 hour.",
+"Your servant appears as a visible origami version of itself.",
+"Your servant is immune to poison and psychic damage.",
+"Your servant can move through a space as narrow as 1 inch wide without squeezing.",
+"When I use my bonus action to command a servant, I can issue a unique command to each servant I have created as part of the same bonus action.",
+"Your servant falls at a rate of 60 feet per round and takes no falling damage.",
+"Your servant can see invisible creatures and objects as if they were visible.",
+"As an action, while my servant is within 100 feet of you, I can see through my servant’s eyes and hear what it hears until the start of my next turn, gaining the benefits of any special senses that the servant has. During this time, I are deaf and blind with regard to my own senses."
 
 			])
 
