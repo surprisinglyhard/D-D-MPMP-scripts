@@ -21,6 +21,7 @@ AddSubClass("wizard", "origami mage", {
 	regExpSearch : /^(?=.*origami)(?=.*(wizard|mage)).*$/i,
 	subname : "Origami Mage",
 	source : [["OTTG", 152]],
+	spellcastingExtra : ["jolt","retrieve","root grab","task","Armament","bubble lift","duplicate","gift","pacify person","sand structure","summon vehicle","swallow magic","water bullet","whelm weapon","at your side","beast transformation","counter spy","ember belly","obscure object","rageful nimbus","spell signature","shared vision","switched form","transparency","wind sprint","butterfly storm","pacify monster","create pirit train stop","festival king","mass levitate","origami bird storm","submerge","summon jack-o'-lantern","tamh gon's fiery festival feast","custacean form"],
 	fullname : "Origami Mage",
 	features : {
 
@@ -208,3 +209,136 @@ limfeaname : "Arcane Arts",
 	}
 
 });
+
+SpellsList["armament"] = {
+	name : "Armament",
+	classes : ["wizard"],
+	source : [["OTTG", 181]],
+	level : 1,
+	school : "Conj",
+	time : "1 a",
+	range : "10 ft",
+	components : "V,S,M",
+	compMaterial : "Metal powder",
+	duration : "8 h",
+	description : "up to 5(+3/SL) nonmagical weapons of your choice appear in an unoccupied space in range",
+	descriptionFull : "Up to five simple or martial weapons of your choice materialize in an unoccupied space you can see within range. The weapons are nonmagical, but they are well-made and stylistically look however you would like. The weapons vanish when the spell ends.When you cast this spell using a spell slot of 2nd level or higher, you can summon three additional simple or martial weapons of your choice for each slot level above 1st."
+};
+
+SpellsList["at your side"] = {
+	name : "At Your Side",
+	classes : ["wizard"],
+	source : [["OTTG", 181]],
+	level : 2,
+	school : "Trans",
+	time : "1 a",
+	range : "30 ft",
+	components : "V,S",
+	duration : "1 h",
+	description : "",
+	descriptionFull : "You and up to three other willing creatures of your choice within range form an arcane bond, which magically pulls you forward when moving towards each other. For the duration, each target’s speed increases by 5 feet, and whenever an affected creature ends its turn, other targets of the spell can use their reaction to move up to half their speedin the direction of another affected creature. When you cast this spell using a spell slot of 3rd level or higher, you can target one additional creature for each slot level above 2nd."
+};
+
+SpellsList["beast transmutation"] = {
+	name : "Beast Transmutation",
+	classes : ["wizard"],
+	source : [["OTTG", 182]],
+	level : 2,
+	school : "Trans",
+	time : "1 a",
+	range : "30 ft",
+	components : "S",
+	duration : "Conc, 1 h",
+	save : "Wis",
+	description : "",
+	descriptionFull : "This spell transforms a beast that you can see within range into a new humanoid form. An unwilling creature must succeed on a Wisdom saving throw to avoid the effect. The spell has no effect on a beast with 0 hit points. The transformation lasts for the duration, or until the target drops to 0 hit points or dies. The new form has the appearance of a humanoid of any race you choose. The target’s game statistics, excluding mental ability scores, are replaced by the statistics of a commoner. It retains its alignment and personality. The target assumes the hit points of its commoner form. When it reverts to its normal form, the beast returns to the number of hit points it had before it transformed. If it reverts as a result of dropping to 0 hit points, any excess damage carries over to its normal form. As long as the excess damage doesn’t reduce the beast’s normal form to 0 hit points, it isn’t knocked unconscious. The creature is limited in the actions it can perform by the nature of its new form. When you cast this spell using a spell slot of 3rd level or higher, the spell’s duration increases by 1 hour for each slot level above 2nd."
+};
+
+SpellsList["bubble lift"] = {
+	name : "Bubble Lift",
+	classes : ["wizard"],
+	source : [["OTTG", 182]],
+	level : 1,
+	school : "Conj",
+	time : "1 a",
+	range : "60 ft",
+	components : "V",
+	duration : "1 h",
+	description : "",
+	descriptionFull : "You blow a bubble around any solid, granular, or liquid object that weighs 500 pounds or less, causing it to float 4 feet off the ground. No matter what the contents of the bubble are, the bubble weighs 10 pounds and can be pushed using an action. Strong winds or effects that would push a creature also push the bubble. The bubble always floats at least 4 feet off the ground, and descends from a fall at a speed of 10 feet per round. As an action, a creature can pierce the outside of the bubble, causing it to pop and releasing its contents. When you cast this spell using a spell slot of 2nd level or higher, you can increase the weight the bubble can lift by 500 pounds for each slot level above 1st."
+};
+
+SpellsList["butterfly storm"] = {
+	name : "Butterfly Storm",
+	classes : ["wizard"],
+	source : [["OTTG", 182]],
+	level : 3,
+	school : "Conj",
+	time : "1 a",
+	range : "120 ft",
+	components : "V,S,M",
+	compMaterial : "Insect legs",
+	duration : "Conc, 1 min",
+	description : "",
+	descriptionFull : "You create a chaotic cloud of butterflies in a 20-foot-radius sphere centered on a point you choose within range. The area is heavily obscured, and resting smoke or fog in the area is dispersed. Creatures of your choice in the area when you cast this spell ignore the following effects. For the duration, the affected area is difficult terrain. When a creature attempts to leave the spell’s area, it must make a Strength saving throw. On a failed save, it is pulled back to an unoccupied space closest to the center of the sphere."
+};
+
+SpellsList["conjure ocean"] = {
+	name : "Conjure Ocean",
+	classes : ["wizard"],
+	source : [["OTTG", 182]],
+	level : 3,
+	school : "Conj",
+	time : "1 a",
+	range : "60 ft",
+	components : "V,S,M",
+	compMaterial : "A piece of witch’s eye coral",
+	duration : "Conc, 10 min",
+	description : "",
+	descriptionFull : "You teleport a random 20-foot cube of water from the bottom of the ocean to an area that you can see within range. The water holds its cube shape as if held within a container. A creature can enter and exit the water as it normally would. When the spell ends, the water loses its shape, crashing to the ground and spreading outward. Any creature inside the water at this time is carried 30 feet in a random direction."
+};
+
+SpellsList["counter spy"] = {
+	name : "Counter Spy",
+	classes : ["wizard"],
+	source : [["OTTG", 183]],
+	level : 2,
+	school : "Abjur",
+	time : "10 min",
+	range : "5 ft",
+	components : "V,S,M",
+	compMaterial : "A bag of sand and six candles",
+	duration : "1 h",
+	description : "",
+	descriptionFull : "You create an intricate arcane circle made of candles and sand centered on a point on the ground within range. The circle can have a radius of 10 feet or less. If at any point before the spell ends a creature outside the circle can see or hear you through magical or nonmagical means, the candle’s flames will change color. If a spell or magical effect was used, you are aware of it and understand the extent of its effects."
+};
+
+SpellsList["create spirit train stop"] = {
+	name : "Create Spirit Train Stop",
+	classes : ["wizard"],
+	source : [["OTTG", 183]],
+	level : 5,
+	school : "Conj",
+	time : "1 min",
+	range : "10 ft",
+	components : "V,S,M",
+	compMaterial : "A blank ticket and high quality ink worth at least 50 gp, which the spell consumes",
+	duration : "1 h",
+	description : "",
+	descriptionFull : "You create an intricate arcane circle made of candles and sand centered on a point on the ground within range. The circle can have a radius of 10 feet or less. If at any point before the spell ends a creature outside the circle can see or hear you through magical or nonmagical means, the candle’s flames will change color. If a spell or magical effect was used, you are aware of it and understand the extent of its effects."
+};
+
+SpellsList["crustacean form"] = {
+	name : "Crustacean Form",
+	classes : ["wizard"],
+	source : [["OTTG", 184]],
+	level : 6,
+	school : "Abjur",
+	time : "1 a",
+	range : "self",
+	components : "V,S,M",
+	compMaterial : "A rust crab shell",
+	duration : "Conc, 1 min",
+	description : "",
+	descriptionFull : "You create a large ethereal crustacean form around your body, which protects and aids you in combat. For the duration, your Armor Class becomes 20 (if it wasn’t already higher), you gain a swimming speed of 40 feet, and you gain blindsight out to a range of 30 feet. In addition, you can use your bonus action to make a melee weapon attack using your claws. This attack uses your spell attack bonus and deals 1d10 bludgeoning damage on a hit. Additionally, your ethereal shell has a damage threshold of 15 hit points. A damage threshold gives you immunity to all damage unless it is an amount of damage equal to or greater than the threshold value, in which case you take damage as normal. Any damage that fails to meet or exceed the shell’s damage threshold is considered superficial and doesn’t reduce any hit points."
+};
