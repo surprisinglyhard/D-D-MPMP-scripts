@@ -124,7 +124,8 @@ limfeaname : "Arcane Arts",
 			spellcastingBonus : [{
 				name : "Origami Familiar",
 				spells : ["find familiar"],
-				selection : ["find familiar"]
+				selection : ["find familiar"],
+				firstCol : "markedbox"
 			}]
 
 		},
@@ -220,7 +221,7 @@ SpellsList["armament"] = {
 	components : "V,S,M",
 	compMaterial : "Metal powder",
 	duration : "8 h",
-	description : "up to 5(+3/SL) nonmagical weapons of your choice appear in an unoccupied space in range",
+	description : "Up to 5(+3/SL) nonmagical weapons of your choice appear in an unoccupied space in range",
 	descriptionFull : "Up to five simple or martial weapons of your choice materialize in an unoccupied space you can see within range. The weapons are nonmagical, but they are well-made and stylistically look however you would like. The weapons vanish when the spell ends.When you cast this spell using a spell slot of 2nd level or higher, you can summon three additional simple or martial weapons of your choice for each slot level above 1st."
 };
 
@@ -234,7 +235,7 @@ SpellsList["at your side"] = {
 	range : "30 ft",
 	components : "V,S",
 	duration : "1 h",
-	description : "",
+	description : "Hover for Desc.",
 	descriptionFull : "You and up to three other willing creatures of your choice within range form an arcane bond, which magically pulls you forward when moving towards each other. For the duration, each target’s speed increases by 5 feet, and whenever an affected creature ends its turn, other targets of the spell can use their reaction to move up to half their speedin the direction of another affected creature. When you cast this spell using a spell slot of 3rd level or higher, you can target one additional creature for each slot level above 2nd."
 };
 
@@ -249,7 +250,7 @@ SpellsList["beast transmutation"] = {
 	components : "S",
 	duration : "Conc, 1 h",
 	save : "Wis",
-	description : "",
+	description : "Hover for Desc.",
 	descriptionFull : "This spell transforms a beast that you can see within range into a new humanoid form. An unwilling creature must succeed on a Wisdom saving throw to avoid the effect. The spell has no effect on a beast with 0 hit points. The transformation lasts for the duration, or until the target drops to 0 hit points or dies. The new form has the appearance of a humanoid of any race you choose. The target’s game statistics, excluding mental ability scores, are replaced by the statistics of a commoner. It retains its alignment and personality. The target assumes the hit points of its commoner form. When it reverts to its normal form, the beast returns to the number of hit points it had before it transformed. If it reverts as a result of dropping to 0 hit points, any excess damage carries over to its normal form. As long as the excess damage doesn’t reduce the beast’s normal form to 0 hit points, it isn’t knocked unconscious. The creature is limited in the actions it can perform by the nature of its new form. When you cast this spell using a spell slot of 3rd level or higher, the spell’s duration increases by 1 hour for each slot level above 2nd."
 };
 
@@ -263,7 +264,7 @@ SpellsList["bubble lift"] = {
 	range : "60 ft",
 	components : "V",
 	duration : "1 h",
-	description : "",
+	description : "Hover for Desc.",
 	descriptionFull : "You blow a bubble around any solid, granular, or liquid object that weighs 500 pounds or less, causing it to float 4 feet off the ground. No matter what the contents of the bubble are, the bubble weighs 10 pounds and can be pushed using an action. Strong winds or effects that would push a creature also push the bubble. The bubble always floats at least 4 feet off the ground, and descends from a fall at a speed of 10 feet per round. As an action, a creature can pierce the outside of the bubble, causing it to pop and releasing its contents. When you cast this spell using a spell slot of 2nd level or higher, you can increase the weight the bubble can lift by 500 pounds for each slot level above 1st."
 };
 
@@ -278,7 +279,7 @@ SpellsList["butterfly storm"] = {
 	components : "V,S,M",
 	compMaterial : "Insect legs",
 	duration : "Conc, 1 min",
-	description : "",
+	description : "Hover for Desc.",
 	descriptionFull : "You create a chaotic cloud of butterflies in a 20-foot-radius sphere centered on a point you choose within range. The area is heavily obscured, and resting smoke or fog in the area is dispersed. Creatures of your choice in the area when you cast this spell ignore the following effects. For the duration, the affected area is difficult terrain. When a creature attempts to leave the spell’s area, it must make a Strength saving throw. On a failed save, it is pulled back to an unoccupied space closest to the center of the sphere."
 };
 
@@ -293,7 +294,7 @@ SpellsList["conjure ocean"] = {
 	components : "V,S,M",
 	compMaterial : "A piece of witch’s eye coral",
 	duration : "Conc, 10 min",
-	description : "",
+	description : "Hover for Desc.",
 	descriptionFull : "You teleport a random 20-foot cube of water from the bottom of the ocean to an area that you can see within range. The water holds its cube shape as if held within a container. A creature can enter and exit the water as it normally would. When the spell ends, the water loses its shape, crashing to the ground and spreading outward. Any creature inside the water at this time is carried 30 feet in a random direction."
 };
 
@@ -308,7 +309,7 @@ SpellsList["counter spy"] = {
 	components : "V,S,M",
 	compMaterial : "A bag of sand and six candles",
 	duration : "1 h",
-	description : "",
+	description : "Hover for Desc.",
 	descriptionFull : "You create an intricate arcane circle made of candles and sand centered on a point on the ground within range. The circle can have a radius of 10 feet or less. If at any point before the spell ends a creature outside the circle can see or hear you through magical or nonmagical means, the candle’s flames will change color. If a spell or magical effect was used, you are aware of it and understand the extent of its effects."
 };
 
@@ -323,7 +324,7 @@ SpellsList["create spirit train stop"] = {
 	components : "V,S,M",
 	compMaterial : "A blank ticket and high quality ink worth at least 50 gp, which the spell consumes",
 	duration : "1 h",
-	description : "",
+	description : "Hover for Desc.",
 	descriptionFull : "You create an intricate arcane circle made of candles and sand centered on a point on the ground within range. The circle can have a radius of 10 feet or less. If at any point before the spell ends a creature outside the circle can see or hear you through magical or nonmagical means, the candle’s flames will change color. If a spell or magical effect was used, you are aware of it and understand the extent of its effects."
 };
 
@@ -338,7 +339,7 @@ SpellsList["crustacean form"] = {
 	components : "V,S,M",
 	compMaterial : "A rust crab shell",
 	duration : "Conc, 1 min",
-	description : "",
+	description : "Hover for Desc.",
 	descriptionFull : "You create a large ethereal crustacean form around your body, which protects and aids you in combat. For the duration, your Armor Class becomes 20 (if it wasn’t already higher), you gain a swimming speed of 40 feet, and you gain blindsight out to a range of 30 feet. In addition, you can use your bonus action to make a melee weapon attack using your claws. This attack uses your spell attack bonus and deals 1d10 bludgeoning damage on a hit. Additionally, your ethereal shell has a damage threshold of 15 hit points. A damage threshold gives you immunity to all damage unless it is an amount of damage equal to or greater than the threshold value, in which case you take damage as normal. Any damage that fails to meet or exceed the shell’s damage threshold is considered superficial and doesn’t reduce any hit points."
 };
 
@@ -353,7 +354,7 @@ SpellsList["dara blocks"] = {
 	components : "V,S,M",
 	compMaterial : "A pinch of sand and a piece of pottery",
 	duration : "1 min",
-	description : "",
+	description : "Hover for Desc.",
 	descriptionFull : "You create five 1-foot cubes of magical force known as dara blocks. Each dara block appears in a different unoccupied space of your choice within range and becomes magically fixed in place. The blocks are invisible to all creatures except you and any creature you designate when you cast the spell. A creature that can see the dara blocks (including one benefiting from see invisibility or truesight) sees a luminous cube made of a transparent, dark green light. A block fixed in the air can hold up to 5,000 pounds of weight. More weight causes the block to fall. A creature can use an action to make a Strength check against your spell save DC, moving the fixed block up to 10 feet on a success. When you cast this spell using a spell slot of 4th level or higher, you can create two additional dara blocks for each slot level above 3rd."
 };
 
@@ -368,7 +369,7 @@ SpellsList["duplicate"] = {
 	components : "S,M",
 	compMaterial : "Copper powder and wax",
 	duration : "1 h",
-	description : "",
+	description : "Hover for Desc.",
 	descriptionFull : "You create an exact replica of an object you can see within range that weighs no more than 25 pounds. At first glance, the two objects are indistinguishable from each other and the duplicate functions as if it were the original, except for any magical properties the original object may have. The duplicate disappears when the spell ends. If a creature uses its action to examine the duplicate, the creature can determine that it is a replica with a successful Intelligence (Investigation) check against your spell save DC. When you cast this spell using a spell slot of 2nd or 3rd level, the duration of the spell increases to 8 hours. When you use a spell slot of 4th level or higher, the duration of the spell increases to 24 hours."
 };
 
@@ -383,7 +384,7 @@ SpellsList["ember belly"] = {
 	components : "S,M",
 	compMaterial : "A flask of oil, which the spell consumes",
 	duration : "8 h",
-	description : "",
+	description : "Hover for Desc.",
 	descriptionFull : "You swallow the oil consumed in the casting of the spell. Once before the spell ends, you can exhale the oil as a bonus action, igniting it as you expel it from your body. Each creature in a 5-foot-wide, 30-foot-long line must make a Dexterity saving throw, taking 2d10 fire damage on a failed save, or half as much damage on a successful one. Once you exhale the oil, the spell ends."
 };
 
@@ -398,7 +399,7 @@ SpellsList["festival king"] = {
 	components : "V,S,M",
 	compMaterial : "A small ribon",
 	duration : "Conc, 1 min",
-	description : "",
+	description : "Hover for Desc.",
 	descriptionFull : "Choose a creature within range. A gaudy crown and cape appear on the target, accompanied by a disembodied arrangement of brass instruments. For the duration, the target becomes the Festival King and has an aura of importance that emanates from them. Any creature that moves to a space within 20 feet of the Festival King for the first time on a turn or starts its turn there, must make a Charisma saving throw. A creature that can’t be charmed succeeds on this saving throw automatically. On a failed save, the creature becomes enamored with the Festival King, chanting, and dancing around them. While under the effects of the spell, creatures spend their action and bonus action at the start of their turn giving all of their attention and admiration to the Festival King. If a creature starts its turn outside of the Festival King’s aura, it is no longer under the effects of the spell."
 };
 
@@ -412,7 +413,7 @@ SpellsList["gift"] = {
 	range : "30 ft",
 	components : "V,S",
 	duration : "Instantaneous",
-	description : "",
+	description : "Hover for Desc.",
 	descriptionFull : "Choose a creature you can see within range. You take 1d20 necrotic damage, and the target regains hit points equal to the amount of damage you took."
 };
 
@@ -426,7 +427,7 @@ SpellsList["jolt"] = {
 	range : "30 ft",
 	components : "V,S",
 	duration : "Instantaneous",
-	description : "",
+	description : "Hover for Desc.",
 	descriptionCantripDie : "Ranged spell attack for `CD`d8 Lightning dmg",
 	descriptionFull : "A jolt of electricity springs from your hand towards a creature you can see within range. Make a ranged spell attack against the target. On a hit, the target takes 1d8 lightning damage. Alternatively, you can target a machine within range and temporarily turn it on, allowing it to function as if it were whelmed by a spirit or permanently enchanted. Machines targeted by this spell stay powered for 18 seconds before turning back off. For a machine to function using this spell, it must still be in working condition. The spell’s damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8)."
 };
@@ -441,7 +442,7 @@ SpellsList["light snare"] = {
 	range : "60 ft",
 	components : "V,S",
 	duration : "Instantaneous",
-	description : "",
+	description : "Hover for Desc.",
 	descriptionFull : "A shimmering band of light streaks toward a target within range and envelops it in a spectacular burst of light. Make a ranged spell attack against the target. On a hit, the target is restrained, and it is magically fixed in place until the end of its next turn."
 };
 
@@ -457,7 +458,7 @@ SpellsList["mass levitate"] = {
 	compMaterial : "A small leather loop",
 	duration : "Conc, 10 min",
 	save : "Con",
-	description : "6 Creatures or objects in range raise 20 ft",
+	description : "6 Creatures or objects in range save or raise 20 ft into air jail",
 	descriptionFull : "Six creatures or loose objects of your choice that you can see within range rise vertically, up to 20 feet, and remain suspended there for the duration. The spell can levitate a target that weighs up to 500 pounds. An unwilling creature that succeeds on a Constitution saving throw is unaffected. A target can move only by pushing or pulling against a fixed object or surface within reach (such as a wall or a ceiling), which allows it to move as if it were climbing. You can change the altitude of any number of targets by up to 20 feet in either direction on your turn. If you are one of the targets, you can move up or down as part of your move. Otherwise, you can use your action to move the targets, which must remain within the spell’s range. When the spell ends, the targets float gently to the ground if it is still aloft."
 };
 
@@ -486,7 +487,7 @@ SpellsList["origami bird swarm"] = {
 	components : "V,S,M",
 	compMaterial : "Fine papers worth 10 gp, which the spell consumes",
 	duration : "Instantaneous",
-	description : "create 8(+2/SL) origami birds that each deal 1d6 slashing dmg upon colision with a creature",
+	description : "Create 8(+2/SL) origami birds that each deal 1d6 slashing dmg upon colision with a creature",
 	descriptionFull : "A swarm of eight origami birds erupts from the stack of papers consumed in the casting of the spell and flies toward a creature you can see within range. If the target is within 30 feet of you when you cast the spell, the swarm collides with the target, dealing 8d6 slashing damage to it, and the birds disappear. If the target is farther than 30 feet away from you when you cast the spell, the swarm travels at a rate of 30 feet per round in the direction of the target, ignoring difficult terrain and moving around creatures and other obstructions as needed. While the swarm is traveling, it obstructs a 5-foot-cube area as if it were a Medium creature. While the swarm is traveling, it can be attacked. It has an AC equal to your spell save DC. For every attack that hits the swarm, the number of birds in the swarm is reduced by one. At the start of your turn on the round that the swarm reaches its target, the target takes 1d6 slashing damage for each bird remaining in the swarm. The birds then disappear. When you cast this spell using a spell slot of 6th level or higher, the number of birds in the swarm increases by two for each slot level above 5th; if the target is within 30 feet of you when you cast the spell, it takes an extra 2d6 slashing damage for each slot level above 5th."
 };
 
@@ -510,7 +511,7 @@ SpellsList["pacify person"] = {
 	name : "Pacify Person",
 	classes : ["wizard"],
 	source : [["OTTG", 187]],
-	level : 4,
+	level : 1,
 	school : "Ench",
 	time : "1 a",
 	range : "60 ft",
@@ -520,4 +521,280 @@ SpellsList["pacify person"] = {
 	save : "Wis",
 	description : "1(+1/SL) humanoid in range can’t attack, cast a spell that affects an enemy, or deal damage to another creature.",
 	descriptionFull : "You attempt to pacify a humanoid you can see within range. The target must make a Wisdom saving throw. If it fails the save, it is pacified by you until the spell ends. A pacified creature can’t attack, cast a spell that affects an enemy, or deal damage to another creature. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. When you cast this spell using a spell slot of 2nd level or higher, you can target one additional humanoid for each slot level above 1st. The humanoids must be within 30 feet of each other when you target them."
+};
+
+SpellsList["plummet"] = {
+	name : "Plummet",
+	classes : ["wizard"],
+	source : [["OTTG", 188]],
+	level : 3,
+	school : "Trans",
+	time : "1 a",
+	range : "300 ft",
+	components : "V,S",
+	duration : "Instantaneous",
+	save : "Dex",
+	description : "1 flying creature in range falls to ground taking 1d6/10 ft up to 20d6 bldg dmg. On save, the creature drops halfway to the ground",
+	descriptionFull : "You conjure an enormous glowing force, which wraps around a flying creature within range, and attempt to pull it out of the air. The target must make a Dexterity saving throw. On a failed save, it is pulled to the ground and takes falling damage as normal (1d6 bludgeoning damage for every 10 feet it falls, to a maximum of 20d6). On a successful save, the creature drops halfway to the ground and takes no damage."
+};
+
+SpellsList["plummet"] = {
+	name : "Plummet",
+	classes : ["wizard"],
+	source : [["OTTG", 188]],
+	level : 3,
+	school : "Trans",
+	time : "1 a",
+	range : "300 ft",
+	components : "V,S",
+	duration : "Instantaneous",
+	save : "Dex",
+	description : "1 flying creature in range falls to ground taking 1d6/10 ft up to 20d6 bldg dmg. On save, the creature drops halfway to the ground",
+	descriptionFull : "You conjure an enormous glowing force, which wraps around a flying creature within range, and attempt to pull it out of the air. The target must make a Dexterity saving throw. On a failed save, it is pulled to the ground and takes falling damage as normal (1d6 bludgeoning damage for every 10 feet it falls, to a maximum of 20d6). On a successful save, the creature drops halfway to the ground and takes no damage."
+};
+
+SpellsList["pogmo's pot"] = {
+	name : "Pogmo's Pot",
+	classes : ["wizard"],
+	source : [["OTTG", 188]],
+	level : 3,
+	school : "Conj",
+	time : "1 a",
+	range : "60 ft",
+	components : "V,S",
+	duration : "10 min",
+	description : "Summon Pogmo's pot",
+	descriptionFull : "You summon a cast iron pot in an unoccupied space on the ground within range. All objects within 20 feet of the pot that are neither worn nor carried and that weigh no more than 10 pounds are instantly sucked inside Pogmo’s strange container, whether they look like they should fit or not. All objects are stored in an extradimensional space inside the pot until the spell ends, at which point the pot vanishes and the objects it contained appear on the ground in its space. For the duration, the pot remains sealed shut and the objects inside can’t be accessed until the spell ends. The pot is 1 foot wide and 1 foot tall. It can easily be moved or carried and always weighs 15 pounds, regardless of how much the objects it contains weigh. The pot is immune to all damage, but it can be dispelled."
+};
+
+SpellsList["rageful nimbus"] = {
+	name : "Rageful Nimbus",
+	classes : ["wizard"],
+	source : [["OTTG", 188]],
+	level : 2,
+	school : "Evoc",
+	time : "1 bns",
+	range : "60 ft",
+	components : "V,S,M",
+	compMaterial : "A drop of water",
+	duration : "1 min",
+	description : "Hover for Desc.",
+	descriptionFull : "Choose a creature within range, which can be yourself. A pristine, fluffy white cloud appears above the target and follows them for the duration. If the target takes damage from a hostile creature you can see, you can use your reaction to make a ranged spell attack from the cloud, provided that creature is within 60 feet of the target. On a hit, the creature takes 2d8 lightning damage. When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 1d8 for every two slot levels above 2nd."
+};
+
+SpellsList["retrieve"] = {
+	name : "Retrieve",
+	classes : ["wizard"],
+	source : [["OTTG", 188]],
+	level : 0,
+	school : "trans",
+	time : "1 bns",
+	range : "15 ft",
+	components : "V",
+	duration : "Instantaneous",
+	description : "1 object in range not worn/carried/over 10lbs, flys to your hand",
+	descriptionFull : "You cause an object within range that isn’t being worn or carried to fly to your open hand. The object must weigh no more than 10 pounds or the spell fails."
+};
+
+SpellsList["root grab"] = {
+	name : "Root Grab",
+	classes : ["wizard"],
+	source : [["OTTG", 189]],
+	level : 0,
+	school : "trans",
+	time : "1 rea",
+	range : "10 ft",
+	components : "V,S",
+	duration : "Instantaneous",
+	description : "Target creature's speed is reduced by 10 feet until the start of your next turn",
+	descriptionFull : "You cause roots to reach out and grasp at the creature that provoked the opportunity attack, hindering its movement. The creature’s speed is reduced by 10 feet until the start of your next turn."
+};
+
+SpellsList["sand structure"] = {
+	name : "Sand Structure",
+	classes : ["wizard"],
+	source : [["OTTG", 189]],
+	ritual : true,
+	level : 1,
+	school : "Evoc",
+	time : "1 a",
+	range : "30 ft",
+	components : "V,S,M",
+	compMaterial : "A small piece of seaglass",
+	duration : "1 min",
+	description : "Sand wall",
+	descriptionFull : "A wall of sand that is 5 feet tall, 5 feet wide, and 1 foot thick materializes from the ground up in an unoccupied space that you can see within range. The sand functions as solid stone while in its wall form. The wall has AC 13 and 10 hit points. Reducing the wall to 0 hit points destroys it and might cause connected walls to collapse at the GM’s discretion. You can end the spell early by using an action to dismiss it. When the spell ends, the wall crumbles back into sand. If you cast the spell as a ritual, the wall lasts until it is destroyed or dismissed."
+};
+
+SpellsList["spell signature"] = {
+	name : "Spell Signature",
+	classes : ["wizard"],
+	source : [["OTTG", 189]],
+	level : 2,
+	school : "Div",
+	time : "10 min",
+	range : "30 ft",
+	components : "V,S,M",
+	compMaterial : "A rosewood match",
+	duration : "Instantaneous",
+	description : "Hover for Desc.",
+	descriptionFull : "As you cast the spell you draw out the potent scents trapped within all magic. Choose a magical effect you are aware of that’s within range. The effect releases a scent specific to the creature that created it. If you are familiar with the creature, you automatically know that the magical effect was created by them. If you are not familiar with the creature, you can make an ability check using your spellcasting ability modifier and add your proficiency bonus to it. Refer to the table below to determine what information you are able to glean from the scent. When succeeding on a DC check, you also learn previous information given from lower DCs. DC 5 — You learn the type of creature that created the magical effect. DC 10 — If the creature has a class, you learn what it is. DC 15 — You learn if the creature is affiliated with an organization. DC 20 — You learn the name of the creature."
+};
+
+SpellsList["shared vision"] = {
+	name : "Shared Vision",
+	classes : ["wizard"],
+	source : [["OTTG", 189]],
+	level : 2,
+	school : "Div",
+	time : "1 a",
+	range : "1 mi",
+	components : "S,M",
+	compMaterial : "A glass eye",
+	duration : "Conc, 10 min",
+	description : "Hover for Desc.",
+	descriptionFull : "You target a willing creature that is familiar to you and within range. For the duration or until the target dismisses the effect on itself as an action, the target can see through your eyes, gaining the benefits of any special senses that you have. During this time the target can swap between their own vision and your vision as a bonus action. When you cast this spell using a spell slot of 3rd level or higher, you can target one additional willing creature for each slot level above 2nd."
+};
+
+SpellsList["submerge"] = {
+	name : "Submerge",
+	classes : ["wizard"],
+	source : [["OTTG", 190]],
+	level : 5,
+	school : "Conj",
+	time : "1 a",
+	range : "10 ft",
+	components : "V,S",
+	duration : "1 rnd",
+	description : "Hover for Desc.",
+	descriptionFull : "This spell creates a magical link between a body of water within range and another body of water, at any location within 500 miles, on the same plane of existence. You must have seen or touched the destination body of water at least once before. For the duration, any creature can step into the target body of water and exit from the destination body of water by using 5 feet of movement. Both bodies of water must be large enough for the creature attempting to pass through to become fully submerged. If either body of water isn’t large enough for the creature to become fully submerged, there’s a 25 percent chance that the creature exits from a random body of water on the same plane of existence."
+};
+
+SpellsList["summon vehicle"] = {
+	name : "Summon Vehicle",
+	classes : ["wizard"],
+	source : [["OTTG", 191]],
+	level : 1,
+	school : "Conj",
+	time : "1 a",
+	range : "30 ft",
+	components : "V,S,M",
+	compMaterial : "A small piece of rubber",
+	duration : "10 min",
+	description : "Hover for Desc.",
+	descriptionFull : "You summon a bicycle or moving machine in an unoccupied space within 5 feet of you. The vehicle can be no larger than a 5-foot cube, and it can only carry one creature that is Medium or smaller. The vehicle has a walking speed of 60 feet, which you can use while riding it, provided you have at least one free hand to operate the vehicle. You can end the spell early by using an action to dismiss it. When the spell ends, the vehicle vanishes."
+};
+
+SpellsList["swallow magic"] = {
+	name : "Swallow Magic",
+	classes : ["wizard"],
+	source : [["OTTG", 191]],
+	level : 1,
+	school : "Trans",
+	time : "1 rea",
+	range : "Self",
+	components : "S",
+	duration : "Instantaneous",
+	description : "Hover for Desc.",
+	descriptionFull : "You chomp down on the threads of magic left in the air after the triggering spell fails to affect you, swallowing the now latent magic and gaining one of the following effects of your choice: You regain hit points equal to 1d4 + your spellcasting ability modifier, Your speed increases by 15 feet until the end of your next turn, Once before the end of your next turn, you can roll a d4 and add the number rolled to one ability check of your choice."
+};
+
+SpellsList["switched form"] = {
+	name : "Switched Form",
+	classes : ["wizard"],
+	source : [["OTTG", 191]],
+	level : 2,
+	school : "Illus",
+	time : "1 a",
+	range : "30 ft",
+	components : "V,S",
+	duration : "1 h",
+	description : "Hover for Desc.",
+	descriptionFull : "This spell allows you to change the appearance of two humanoids that you can see within range. Each target takes on an illusory disguise, making it look like the other target— including its armor, clothing, weapons, and other belongings on its person. Each creature can seem 1 foot shorter or taller; the disguise otherwise replicates the other target’s physical features as accurately as possible. The spell lasts for the duration, unless you use your action to dismiss it sooner. The changes wrought by this spell fail to hold up to physical inspection. A creature can use its action to inspect a target and make an Intelligence (Investigation) check against your spell save DC. If it succeeds, it becomes aware that the target is disguised."
+};
+
+SpellsList["tamh gon's fiery festival feast"] = {
+	name : "Tamh Gon’s Fiery Festival Feast",
+	classes : ["wizard"],
+	source : [["OTTG", 191]],
+	level : 5,
+	school : "Abjur",
+	time : "10 min",
+	range : "30 ft",
+	components : "V,S,M",
+	compMaterial : "An uncommon ingredient, which the spell consumes",
+	duration : "Instantaneous",
+	description : "Hover for Desc.",
+	descriptionFull : "You sanctify a meal in an extravagant show of thrown spices and twirling dance. Those who partake in the meal are granted the curry blessings of the great festival spirit Tamh Gon. The feast takes 1 hour to consume and the beneficial effects don’t set in until this hour is over. Up to twelve creatures can participate in this feast. A creature that partakes of the feast gains several benefits. The creature reduces its exhaustion level by one, its speed increases by 10 feet, and it gains a +2 bonus to Dexterity saving throws. It can also activate the effects of the Ember Belly spell one time while the benefits of the feast last. The feast’s benefits last for 24 hours."
+};
+
+SpellsList["task"] = {
+	name : "Task",
+	classes : ["wizard"],
+	source : [["OTTG", 191]],
+	level : 0,
+	school : "Trans",
+	time : "1 a",
+	range : "15 ft",
+	components : "S",
+	duration : "1 h",
+	description : "Hover for Desc.",
+	descriptionFull : "With a flick of your wrist, you magically complete a small and simple task, such as flipping a book page, buttering bread, or heating a cup of tea, without any physical interaction. The task can’t include anything that is intended to inflict a harmful effect on a creature and must be something you’d normally be able to accomplish without the use of magic. The spell fails if the target of the task has total cover from you. If you cast this spell multiple times, you can have up to three tasks active at a time, and you can dismiss one of them as a bonus action."
+};
+
+SpellsList["transparency"] = {
+	name : "Transparency",
+	classes : ["wizard"],
+	source : [["OTTG", 192]],
+	level : 2,
+	school : "Illus",
+	time : "1 rea",
+	range : "Self",
+	components : "S",
+	duration : "1 rnd",
+	description : "Hover for Desc.",
+	descriptionFull : "You temporarily become invisible to stop yourself from being discovered by the triggering creature. Until the end of your next turn, you remain invisible and your steps make no sound, regardless of the surface you are moving across. Anything you are wearing or carrying is invisible as long as it is on your person. The spell ends early if you attack or cast a spell."
+};
+
+SpellsList["water bullet"] = {
+	name : "Water Bullet",
+	classes : ["wizard"],
+	source : [["OTTG", 192]],
+	level : 1,
+	school : "Evoc",
+	time : "1 a",
+	range : "90 ft",
+	components : "V,S",
+	duration : "Instantaneous",
+	description : "Hover for Desc.",
+	descriptionFull : "You create a sphere of swirling water that spins rapidly in your hand or mouth before you hurl it at a creature within range. Make a ranged spell attack against the target. On a hit, the target takes bludgeoning damage based on how far it is away from you: 1–10 feet: 5d6, 11–60 feet: 4d6, 61–90 feet: 3d6. When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d6 for each slot level above 1st."
+};
+
+SpellsList["whelm weapon"] = {
+	name : "Whelm Weapon",
+	classes : ["wizard"],
+	source : [["OTTG", 192]],
+	level : 1,
+	school : "Trans",
+	time : "1 a",
+	range : "60 ft",
+	components : "V,S,M",
+	compMaterial : "A drop of seawater",
+	duration : "Conc, 1 min",
+	description : "Up to 3(+2/SL) weapons deal 1d4 dmg",
+	descriptionFull : "Up to three weapons of your choice that you can see within range become enveloped by water. Roll a d4; for the duration, any damage dealt by the targeted weapons is reduced by the number you rolled (to a minimum of 1). When you cast this spell using a spell slot of 2nd level or higher, you can target two additional weapons for each slot level above 1st."
+};
+
+SpellsList["wind sprint"] = {
+	name : "Wind Sprint",
+	classes : ["wizard"],
+	source : [["OTTG", 192]],
+	level : 2,
+	school : "Evoc",
+	time : "1 bns",
+	range : "60 ft",
+	components : "V",
+	duration : "Instantaneous",
+	description : "Hover for Desc.",
+	descriptionFull : "A turning tempest wind lifts you up and carries you to a creature you can see within range. The next time you hit a creature with a melee weapon attack before the end of the turn, the attack deals an extra 2d6 slashing damage as the winds buffet the target."
 };
