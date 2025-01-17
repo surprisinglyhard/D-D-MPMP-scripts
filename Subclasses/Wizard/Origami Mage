@@ -21,7 +21,6 @@ AddSubClass("wizard", "origami mage", {
 	regExpSearch : /^(?=.*origami)(?=.*(wizard|mage)).*$/i,
 	subname : "Origami Mage",
 	source : [["OTTG", 152]],
-	spellcastingExtra : ["jolt","retrieve","root grab","task","Armament","bubble lift","duplicate","gift","pacify person","sand structure","summon vehicle","swallow magic","water bullet","whelm weapon","at your side","beast transformation","counter spy","ember belly","obscure object","rageful nimbus","spell signature","shared vision","switched form","transparency","wind sprint","butterfly storm","pacify monster","create pirit train stop","festival king","mass levitate","origami bird storm","submerge","summon jack-o'-lantern","tamh gon's fiery festival feast","custacean form"],
 	fullname : "Origami Mage",
 	features : {
 
@@ -444,4 +443,81 @@ SpellsList["light snare"] = {
 	duration : "Instantaneous",
 	description : "",
 	descriptionFull : "A shimmering band of light streaks toward a target within range and envelops it in a spectacular burst of light. Make a ranged spell attack against the target. On a hit, the target is restrained, and it is magically fixed in place until the end of its next turn."
+};
+
+SpellsList["mass levitate"] = {
+	name : "Mass Levitate",
+	classes : ["wizard"],
+	source : [["OTTG", 186]],
+	level : 5,
+	school : "Trans",
+	time : "1 a",
+	range : "60 ft",
+	components : "V,S,M",
+	compMaterial : "A small leather loop",
+	duration : "Conc, 10 min",
+	save : "Con",
+	description : "6 Creatures or objects in range raise 20 ft",
+	descriptionFull : "Six creatures or loose objects of your choice that you can see within range rise vertically, up to 20 feet, and remain suspended there for the duration. The spell can levitate a target that weighs up to 500 pounds. An unwilling creature that succeeds on a Constitution saving throw is unaffected. A target can move only by pushing or pulling against a fixed object or surface within reach (such as a wall or a ceiling), which allows it to move as if it were climbing. You can change the altitude of any number of targets by up to 20 feet in either direction on your turn. If you are one of the targets, you can move up or down as part of your move. Otherwise, you can use your action to move the targets, which must remain within the spell’s range. When the spell ends, the targets float gently to the ground if it is still aloft."
+};
+
+SpellsList["obscure object"] = {
+	name : "Obscure Object",
+	classes : ["wizard"],
+	source : [["OTTG", 187]],
+	level : 2,
+	school : "Illus",
+	time : "1 a",
+	range : "30 ft",
+	components : "V,S",
+	duration : "Conc, 1 h",
+	description : "1 object in range that fits in a 5 ft cube becomes invisible",
+	descriptionFull : "An object you can see within range becomes invisible until the spell ends. The object can be no larger than a 5-foot cube, and it can’t be worn by a creature."
+};
+
+SpellsList["origami bird swarm"] = {
+	name : "Origami Bird Swarm",
+	classes : ["wizard"],
+	source : [["OTTG", 187]],
+	level : 5,
+	school : "Trans",
+	time : "1 a",
+	range : "300 ft",
+	components : "V,S,M",
+	compMaterial : "Fine papers worth 10 gp, which the spell consumes",
+	duration : "Instantaneous",
+	description : "create 8(+2/SL) origami birds that each deal 1d6 slashing dmg upon colision with a creature",
+	descriptionFull : "A swarm of eight origami birds erupts from the stack of papers consumed in the casting of the spell and flies toward a creature you can see within range. If the target is within 30 feet of you when you cast the spell, the swarm collides with the target, dealing 8d6 slashing damage to it, and the birds disappear. If the target is farther than 30 feet away from you when you cast the spell, the swarm travels at a rate of 30 feet per round in the direction of the target, ignoring difficult terrain and moving around creatures and other obstructions as needed. While the swarm is traveling, it obstructs a 5-foot-cube area as if it were a Medium creature. While the swarm is traveling, it can be attacked. It has an AC equal to your spell save DC. For every attack that hits the swarm, the number of birds in the swarm is reduced by one. At the start of your turn on the round that the swarm reaches its target, the target takes 1d6 slashing damage for each bird remaining in the swarm. The birds then disappear. When you cast this spell using a spell slot of 6th level or higher, the number of birds in the swarm increases by two for each slot level above 5th; if the target is within 30 feet of you when you cast the spell, it takes an extra 2d6 slashing damage for each slot level above 5th."
+};
+
+SpellsList["pacify monster"] = {
+	name : "Pacify Monster",
+	classes : ["wizard"],
+	source : [["OTTG", 187]],
+	level : 4,
+	school : "Ench",
+	time : "1 a",
+	range : "60 ft",
+	components : "V,S,M",
+	compMaterial : "A gull's feather",
+	duration : "Conc, 1 min",
+	save : "Wis",
+	description : "1(+1/SL) creature in range can’t attack, cast a spell that affects an enemy, or deal damage to another creature.",
+	descriptionFull : "You attempt to pacify a creature you can see within range. The target must make a Wisdom saving throw. If it fails the save, it is pacified by you until the spell ends. A pacified creature can’t attack, cast a spell that affects an enemy, or deal damage to another creature. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. When you cast this spell using a spell slot of 5th level or higher, you can target one additional creature for each slot level above 4th. The creatures must be within 30 feet of each other when you target them."
+};
+
+SpellsList["pacify person"] = {
+	name : "Pacify Person",
+	classes : ["wizard"],
+	source : [["OTTG", 187]],
+	level : 4,
+	school : "Ench",
+	time : "1 a",
+	range : "60 ft",
+	components : "V,S,M",
+	compMaterial : "A gull's feather",
+	duration : "Conc, 1 min",
+	save : "Wis",
+	description : "1(+1/SL) humanoid in range can’t attack, cast a spell that affects an enemy, or deal damage to another creature.",
+	descriptionFull : "You attempt to pacify a humanoid you can see within range. The target must make a Wisdom saving throw. If it fails the save, it is pacified by you until the spell ends. A pacified creature can’t attack, cast a spell that affects an enemy, or deal damage to another creature. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. When you cast this spell using a spell slot of 2nd level or higher, you can target one additional humanoid for each slot level above 1st. The humanoids must be within 30 feet of each other when you target them."
 };
